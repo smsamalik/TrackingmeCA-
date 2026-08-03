@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+<defs><linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#003C42"/><stop offset="1" stop-color="#005E69"/></linearGradient></defs>
+<rect width="960" height="600" fill="url(#bg6)"/>
+<rect x="40" y="40" width="880" height="520" rx="16" fill="#FFFFFF"/>
+<text x="60" y="90" font-family="Montserrat, sans-serif" font-weight="800" font-size="18" fill="#17181A">HOS Compliance by Region</text>
+<circle cx="820" cy="82" r="7" fill="#1E8E5A"/><text x="834" y="87" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#5C6B6D">Updated live</text>
+
+    <text x="60" y="160" font-family="Montserrat, sans-serif" font-weight="700" font-size="12" fill="#17181A">Ontario Fleet</text>
+    <rect x="220" y="148" width="560" height="16" rx="8" fill="#F2FBFC"/>
+    <rect x="220" y="148" width="459" height="16" rx="8" fill="#00808E"/>
+    <text x="800" y="161" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">82%</text>
+    
+    <text x="60" y="230" font-family="Montserrat, sans-serif" font-weight="700" font-size="12" fill="#17181A">Quebec Fleet</text>
+    <rect x="220" y="218" width="560" height="16" rx="8" fill="#F2FBFC"/>
+    <rect x="220" y="218" width="526" height="16" rx="8" fill="#00808E"/>
+    <text x="800" y="231" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">94%</text>
+    
+    <text x="60" y="300" font-family="Montserrat, sans-serif" font-weight="700" font-size="12" fill="#17181A">Alberta Fleet</text>
+    <rect x="220" y="288" width="560" height="16" rx="8" fill="#F2FBFC"/>
+    <rect x="220" y="288" width="341" height="16" rx="8" fill="#F99E4B"/>
+    <text x="800" y="301" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">61%</text>
+    
+    <text x="60" y="370" font-family="Montserrat, sans-serif" font-weight="700" font-size="12" fill="#17181A">B.C. Fleet</text>
+    <rect x="220" y="358" width="560" height="16" rx="8" fill="#F2FBFC"/>
+    <rect x="220" y="358" width="492" height="16" rx="8" fill="#00808E"/>
+    <text x="800" y="371" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">88%</text>
+    
+<rect x="60" y="450" width="840" height="80" rx="12" fill="#F2FBFC"/>
+<text x="86" y="480" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">2 active violations flagged</text>
+<text x="86" y="500" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#5C6B6D">Driver #4471 approaching drive-time limit — dispatcher notified</text>
+<circle cx="810" cy="485" r="9" fill="#F99E4B"/>
+</svg>

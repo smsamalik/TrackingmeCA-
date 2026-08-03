@@ -71,16 +71,21 @@ repo. The site was updated to match:
   RCW-360Pro–class 4G wireless sensors), based on reference product graphics
   provided directly. No specific prices, model availability, or claims beyond
   what was shown were added — confirm current SKUs before publishing.
+- **Infographics** — all 22 `.photo-frame` placeholder boxes (dashed border +
+  emoji icon) across the homepage, About, Blog and every solution page have
+  been replaced with real custom SVG illustrations in `assets/infographics/`:
+  dashboard/gauge mockups (fleet map, ELD Hours-of-Service dials, cold-chain
+  temperature gauge, CAN Bus diagnostics cluster, fuel-tank sensor with
+  theft alert) and diagrams (dashcam camera coverage, driver-monitoring risk
+  icons, a Canada coverage map). 11 unique graphics are reused across the 22
+  slots where the same page appears in multiple contexts (e.g., the ELD
+  dashboard illustrates the homepage ELD section, the ELD solution page, and
+  its blog card). These are illustrative diagrams, not real product
+  screenshots — swap in actual UI screenshots and licensed photography
+  before launch if you'd like the real thing instead.
 
 ## Remaining placeholders that still need real content before launch
 
-- **Photography** — every photo slot is a clearly labeled dashed-style placeholder
-  (`.photo-frame`) with a caption describing exactly what authentic Canadian fleet
-  photography should go there. The reference product graphics provided in chat
-  weren't saved as files in this session (no attachment path was available to
-  read), so they couldn't be embedded directly — upload them the same way the
-  logo files were uploaded (as repo files) if you'd like them used as actual
-  page imagery instead of the placeholder frames.
 - **Live site cross-check** — `trackingme.ca` and the Facebook/Instagram/X pages
   all block automated fetches (403), so facts like a physical address, exact
   published pricing, or testimonials couldn't be pulled from them automatically.
