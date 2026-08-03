@@ -56,14 +56,32 @@ repo. The site was updated to match:
   to stay legible in the nav header.
 - **Contact email** — `info@trackingme.ca`, the address given in the brand
   guidelines, now used everywhere (replacing the earlier placeholder).
+- **Phone number** — real number `(416) 779-7382` / `tel:+14167797382`, now used
+  everywhere (site text, `tel:` links, and the LocalBusiness/Organization JSON-LD),
+  replacing the earlier `1-800-555-0199` placeholder.
+- **Social links** — footer icons now point to the real accounts (Facebook,
+  X, Instagram) and are listed in the Organization schema's `sameAs`. Added to
+  every page's footer, not just the homepage.
+- **Hardware terminology** — light, factual mentions added to
+  `solutions/dashcams.html` (MDVR / G-sensor / night-vision hardware class),
+  `solutions/gps-tracking.html` (plug-and-play trackers with no monthly
+  SIM fee as one hardware option), and `solutions/cold-chain.html` (Elitech
+  RCW-360Pro–class 4G wireless sensors), based on reference product graphics
+  provided directly. No specific prices, model availability, or claims beyond
+  what was shown were added — confirm current SKUs before publishing.
 
 ## Remaining placeholders that still need real content before launch
 
 - **Photography** — every photo slot is a clearly labeled dashed-style placeholder
   (`.photo-frame`) with a caption describing exactly what authentic Canadian fleet
-  photography should go there. No stock imagery was used.
-- **Phone number** — `1-800-555-0199` (the North American reserved fictional
-  number range) is still a placeholder pending a real support line.
+  photography should go there. The reference product graphics provided in chat
+  weren't saved as files in this session (no attachment path was available to
+  read), so they couldn't be embedded directly — upload them the same way the
+  logo files were uploaded (as repo files) if you'd like them used as actual
+  page imagery instead of the placeholder frames.
+- **Live site cross-check** — `trackingme.ca` and the Facebook/Instagram/X pages
+  all block automated fetches (403), so facts like a physical address, exact
+  published pricing, or testimonials couldn't be pulled from them automatically.
 - **Pricing** — "starting from $XX" badges on the homepage are illustrative
   placeholders pending a real pricing sheet; all comparison-table claims avoid
   unverifiable "cheaper than X" statements per the brief.
