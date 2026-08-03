@@ -2,19 +2,45 @@
    TrackingMe.ca — Design System
    ========================================================= */
 
+/* Montserrat is the brand's mandated typeface (Brand Guidelines v2.1).
+   Self-hosted variable font (weight axis 100–900) so the whole site
+   works offline / with no third-party font request. */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/montserrat-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/montserrat-italic.woff2") format("woff2");
+}
+
 :root {
-  /* Brand colours */
-  --navy-950: #071426;
-  --navy-900: #0a2342;
-  --navy-800: #123a6b;
-  --navy-700: #1b4f8c;
-  --navy-600: #2563a8;
-  --blue-500: #2f7fd6;
-  --ice-100: #f4f8fb;
-  --ice-200: #e9f1f8;
-  --ice-300: #dbe7f2;
-  --red-600: #d62828;
-  --red-700: #b01f1f;
+  /* ---- Official TrackingMe.ca brand colours (per Brand Guidelines v2.1) ---- */
+  --turquoise: #00abbe;         /* Dark Turquoise — primary brand colour */
+  --orange: #f99e4b;            /* Sunshade Orange — secondary brand colour */
+
+  /* Neither raw brand colour meets WCAG AA text contrast on white
+     (turquoise ≈2.8:1, orange ≈2.1:1), so accessible derived shades are
+     used for text/links/focus states; the raw hues are reserved for
+     large fills, icons and decorative accents. */
+  --turquoise-deep: #00808e;    /* AA-safe on white (4.7:1) — links, text accents */
+  --turquoise-deeper: #005e69;  /* gradient stop / hover */
+  --turquoise-deepest: #003c42; /* gradient stop, darkest */
+  --orange-hover: #db9040;      /* hover state for orange buttons */
+
+  --turquoise-tint-100: #f2fbfc; /* ~5% tint — subtle section backgrounds */
+  --turquoise-tint-200: #e8f7f9; /* ~9% tint */
+  --turquoise-tint-300: #d6f2f5; /* ~16% tint — borders on tinted surfaces */
+
+  --ink: #17181a;                /* brand black/near-black — text, dark UI chrome */
+  --ink-700: #333435;
+
   --white: #ffffff;
   --grey-900: #16212e;
   --grey-700: #3c4a5a;
@@ -24,23 +50,37 @@
   --green-600: #1e8e5a;
   --amber-600: #b7791f;
 
+  /* Legacy aliases kept so the rest of the stylesheet (and any future
+     additions) can keep using semantic names instead of raw hex. */
+  --navy-950: var(--ink);
+  --navy-900: var(--ink);
+  --navy-800: var(--ink-700);
+  --navy-700: var(--turquoise-deep);
+  --navy-600: var(--turquoise-deep);
+  --blue-500: var(--turquoise-deep);
+  --ice-100: var(--turquoise-tint-100);
+  --ice-200: var(--turquoise-tint-200);
+  --ice-300: var(--turquoise-tint-300);
+  --red-600: var(--turquoise-deep);
+  --red-700: var(--turquoise-deeper);
+
   /* Aliases */
-  --brand-primary: var(--navy-900);
-  --brand-accent: var(--red-600);
+  --brand-primary: var(--ink);
+  --brand-accent: var(--orange);
   --bg-body: var(--white);
   --bg-alt: var(--ice-100);
   --text-body: var(--grey-700);
-  --text-heading: var(--navy-950);
+  --text-heading: var(--ink);
 
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
-  --shadow-sm: 0 1px 3px rgba(10, 35, 66, 0.08);
-  --shadow-md: 0 8px 24px rgba(10, 35, 66, 0.10);
-  --shadow-lg: 0 20px 50px rgba(10, 35, 66, 0.16);
+  --shadow-sm: 0 1px 3px rgba(0, 30, 34, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 30, 34, 0.10);
+  --shadow-lg: 0 20px 50px rgba(0, 30, 34, 0.16);
 
   --container-w: 1200px;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-sans: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
 
 * { box-sizing: border-box; }
@@ -96,8 +136,8 @@ p { margin: 0 0 1em; }
   padding: 14px 26px; border-radius: var(--radius-sm); font-weight: 700; font-size: 0.98rem;
   border: 2px solid transparent; cursor: pointer; transition: all .18s ease; white-space: nowrap;
 }
-.btn-primary { background: var(--red-600); color: #fff; }
-.btn-primary:hover { background: var(--red-700); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-primary { background: var(--orange); color: var(--ink); }
+.btn-primary:hover { background: var(--orange-hover); transform: translateY(-1px); box-shadow: var(--shadow-md); }
 .btn-secondary { background: #fff; color: var(--navy-900); border-color: var(--navy-900); }
 .btn-secondary:hover { background: var(--navy-900); color: #fff; }
 .btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
@@ -128,10 +168,9 @@ p { margin: 0 0 1em; }
 
 .header-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; gap: 24px; }
 
-.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.logo svg { height: 38px; width: auto; }
-.logo-word { font-weight: 800; font-size: 1.32rem; color: var(--navy-950); letter-spacing: -0.02em; }
-.logo-word .dot-ca { color: var(--red-600); }
+.logo { display: flex; align-items: center; gap: 14px; flex-shrink: 0; }
+.logo-img { height: 46px; width: auto; display: block; }
+.footer-logo-img { height: 40px; width: auto; display: block; margin-bottom: 16px; }
 .logo-tag { display: block; font-size: 0.62rem; font-weight: 600; letter-spacing: .06em; color: var(--grey-500); text-transform: uppercase; }
 
 .main-nav { flex: 1; display: flex; justify-content: center; }
@@ -188,8 +227,8 @@ p { margin: 0 0 1em; }
 /* -------------------- Hero -------------------- */
 .hero {
   position: relative; overflow: hidden; color: #fff;
-  background: radial-gradient(1100px 550px at 85% -10%, rgba(47,127,214,.35), transparent 60%),
-              linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 45%, var(--navy-700) 100%);
+  background: radial-gradient(1100px 550px at 85% -10%, rgba(249,158,75,.25), transparent 60%),
+              linear-gradient(135deg, var(--turquoise-deepest) 0%, var(--turquoise-deeper) 55%, var(--turquoise-deep) 100%);
   padding: 70px 0 90px;
 }
 .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 50px; align-items: center; }
@@ -212,7 +251,7 @@ p { margin: 0 0 1em; }
   box-shadow: var(--shadow-lg); aspect-ratio: 4/3.1; position: relative;
 }
 .hero-badge-float {
-  position: absolute; bottom: -18px; left: -18px; background: #fff; color: var(--navy-950); border-radius: var(--radius-md);
+  position: absolute; top: -18px; left: -18px; background: #fff; color: var(--navy-950); border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg); padding: 14px 18px; display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 0.86rem;
 }
 .hero-badge-float .pulse-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green-600); position: relative; }
@@ -251,7 +290,7 @@ p { margin: 0 0 1em; }
 /* -------------------- Sections -------------------- */
 section { padding: 88px 0; }
 .section-alt { background: var(--bg-alt); }
-.section-navy { background: linear-gradient(160deg, var(--navy-950), var(--navy-900)); color: #fff; }
+.section-navy { background: linear-gradient(160deg, var(--turquoise-deepest), var(--turquoise-deeper)); color: #fff; }
 .section-navy h2, .section-navy h3 { color: #fff; }
 .section-navy .section-kicker { color: #9fc1e8; }
 .section-head { max-width: 720px; margin: 0 auto 48px; text-align: center; }
@@ -286,7 +325,7 @@ section { padding: 88px 0; }
 .solution-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--grey-300); }
 .solution-card .sc-icon {
   width: 54px; height: 54px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; margin-bottom: 16px; background: var(--ice-200); color: var(--navy-800);
+  font-size: 1.6rem; margin-bottom: 16px; background: var(--ice-200); color: var(--turquoise-deep);
 }
 .solution-card h3 { margin-bottom: 8px; font-size: 1.15rem; }
 .solution-card p { font-size: 0.92rem; color: var(--grey-500); flex: 1; }
@@ -357,7 +396,7 @@ table.compare td.center { text-align: center; }
 .testi-stars { color: var(--amber-600); letter-spacing: 2px; margin-bottom: 10px; }
 .testi-quote { font-size: 0.98rem; color: var(--grey-700); margin-bottom: 16px; }
 .testi-person { display: flex; align-items: center; gap: 12px; }
-.testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--navy-800); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+.testi-avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--turquoise-deep); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
 .testi-name { font-weight: 700; font-size: 0.9rem; color: var(--navy-950); }
 .testi-role { font-size: 0.78rem; color: var(--grey-500); }
 .testi-placeholder-tag { display: inline-block; margin-top: 10px; font-size: 0.7rem; color: var(--grey-500); background: var(--ice-100); padding: 3px 8px; border-radius: 999px; }
@@ -440,12 +479,12 @@ table.compare td.center { text-align: center; }
 .breadcrumb { font-size: 0.82rem; color: var(--grey-500); margin-bottom: 18px; }
 .breadcrumb a { color: var(--navy-700); font-weight: 600; }
 
-.page-hero { background: linear-gradient(160deg, var(--navy-950), var(--navy-800)); color: #fff; padding: 56px 0; }
+.page-hero { background: linear-gradient(160deg, var(--turquoise-deepest), var(--turquoise-deeper)); color: #fff; padding: 56px 0; }
 .page-hero h1 { color: #fff; margin-bottom: 10px; }
 .page-hero p { color: #cfe0f2; max-width: 680px; font-size: 1.05rem; margin-bottom: 0; }
 
 .disclaimer-box {
-  background: var(--ice-100); border-left: 4px solid var(--amber-600); border-radius: var(--radius-sm);
+  background: var(--ice-100); border-left: 4px solid var(--orange); border-radius: var(--radius-sm);
   padding: 16px 20px; font-size: 0.85rem; color: var(--grey-700); margin: 20px 0;
 }
 .disclaimer-box strong { color: var(--navy-950); }

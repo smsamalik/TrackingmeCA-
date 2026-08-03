@@ -15,29 +15,55 @@ resources.html           FAQ hub (FAQPage schema)
 privacy-policy.html      PIPEDA-oriented privacy policy incl. in-cab video/audio consent
 terms.html
 css/style.css            Design system (design tokens, components)
+css/fonts/               Self-hosted Montserrat (brand-mandated typeface)
 js/main.js               Nav, dropdowns, FAQ accordion, tabs, reveal-on-scroll, form UX
-assets/favicon.svg       Placeholder brand mark
+assets/                  Real brand logo exports (see below) + favicons
+brand-source/            Original files uploaded by the client (brand guidelines PDF,
+                         logo JPGs/PNG/PDF) — kept for reference, not linked from any page
 robots.txt, sitemap.xml
 ```
 
-## Important: placeholders that need real content before launch
+## Brand assets — now using the real TrackingMe.ca brand
 
-This was built from scratch — the repository contained no existing logo, brand
-guidelines, photography, pricing, or contact details. The following were used
-as clearly-marked placeholders and **must** be replaced before go-live:
+The client uploaded the official logo files and brand guidelines
+(`brand-source/Tracking Brand Guidelines (Canada).pdf`, v2.1) directly to the
+repo. The site was updated to match:
 
-- **Logo / brand mark** — an original navy/red pin-mark SVG wordmark was created
-  (no existing TrackingMe.ca logo file was found in the repo). Swap `assets/favicon.svg`
-  and the inline SVG in every page header/footer for the real logo.
-- **Brand colours** — navy (`#0a2342`), ice blue and a red accent (`#d62828`) were
-  chosen as a plausible, premium, restrained-Canadian palette (defined as CSS
-  variables in `css/style.css`). Update the `:root` tokens if the real brand
-  palette differs.
+- **Colours** — Dark Turquoise `#00ABBE` and Sunshade Orange `#F99E4B` (the two
+  official brand colours), plus black/white as guideline-approved neutrals.
+  Defined as CSS variables in `css/style.css` (`--turquoise`, `--orange`, `--ink`,
+  etc). Neither raw brand hue meets WCAG AA text contrast on white (turquoise
+  ≈2.8:1, orange ≈2.1:1), so accessible **derived shades** (`--turquoise-deep`,
+  `--turquoise-deeper`) are used for text, links, buttons-with-white-text and
+  focus states, while the raw brand hues are reserved for large fills, icons
+  and decorative accents. Primary buttons use orange with dark ink text
+  (8.5:1), which stays fully accessible while keeping the vivid brand colour.
+- **Typography** — Montserrat, self-hosted as a variable-font WOFF2
+  (`css/fonts/`, ~57KB total for the full weight range + italic) so the
+  mandated typeface loads with no third-party font request.
+- **Logo** — `assets/logo-full-color.png` (header, on white) and
+  `assets/logo-white.png` (footer/dark sections) are extracted directly from
+  the true vector paths in the client's `brand-source/Tracking Canada_Logo.pdf`
+  (via PyMuPDF → SVG → transparent PNG), not redrawn or traced — so edges are
+  pixel-perfect at any size, with no JPEG compression artifacts. No artwork
+  was altered, per the guideline's "do not edit the logo" rule.
+  `assets/favicon-*.png` / `apple-touch-icon.png` crop just the icon mark
+  from the same vector source (favicons necessarily can't fit the wordmark);
+  the guidelines reserve icon-alone usage for the marketing team, so please
+  have them confirm that exception. The horizontal lockup mentioned in the
+  guidelines (icon beside wordmark) wasn't included in the uploaded files —
+  only the stacked "Main Version" was, so that's what's used sitewide, sized
+  to stay legible in the nav header.
+- **Contact email** — `info@trackingme.ca`, the address given in the brand
+  guidelines, now used everywhere (replacing the earlier placeholder).
+
+## Remaining placeholders that still need real content before launch
+
 - **Photography** — every photo slot is a clearly labeled dashed-style placeholder
   (`.photo-frame`) with a caption describing exactly what authentic Canadian fleet
   photography should go there. No stock imagery was used.
-- **Phone / email** — `1-800-555-0199` (the North American reserved fictional
-  number range) and `hello@trackingme.ca` are placeholders.
+- **Phone number** — `1-800-555-0199` (the North American reserved fictional
+  number range) is still a placeholder pending a real support line.
 - **Pricing** — "starting from $XX" badges on the homepage are illustrative
   placeholders pending a real pricing sheet; all comparison-table claims avoid
   unverifiable "cheaper than X" statements per the brief.
