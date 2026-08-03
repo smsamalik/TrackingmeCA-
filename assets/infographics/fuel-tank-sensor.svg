@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 680" width="800" height="680">
+<defs><linearGradient id="bg10" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#003C42"/><stop offset="1" stop-color="#005E69"/></linearGradient>
+<linearGradient id="fuel" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#F99E4B"/><stop offset="1" stop-color="#00ABBE"/></linearGradient></defs>
+<rect width="800" height="680" fill="url(#bg10)"/>
+<g transform="translate(280,120)">
+  <rect x="0" y="0" width="220" height="420" rx="24" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+  <clipPath id="tankclip"><rect x="6" y="6" width="208" height="408" rx="18"/></clipPath>
+  <rect x="6" y="176" width="208" height="244" fill="url(#fuel)" clip-path="url(#tankclip)"/>
+  <line x1="-16" y1="180" x2="0" y2="180" stroke="#FFFFFF" stroke-width="3"/>
+  <line x1="220" y1="180" x2="236" y2="180" stroke="#FFFFFF" stroke-width="3"/>
+  <rect x="88" y="-40" width="44" height="50" rx="6" fill="#5C6B6D"/>
+  <line x1="110" y1="10" x2="110" y2="180" stroke="#00808E" stroke-width="4" stroke-dasharray="4 6"/>
+</g>
+<g transform="translate(120,180)">
+  <rect width="150" height="86" rx="14" fill="#FFFFFF"/>
+  <text x="20" y="34" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#5C6B6D">FUEL LEVEL</text>
+  <text x="20" y="66" font-family="Montserrat, sans-serif" font-weight="800" font-size="26" fill="#17181A">58%</text>
+</g>
+<g transform="translate(530,120)">
+  <rect width="220" height="120" rx="16" fill="#FFFFFF"/>
+  <circle cx="30" cy="34" r="10" fill="#F99E4B"/>
+  <text x="30" y="39" text-anchor="middle" font-size="13" fill="#FFFFFF">!</text>
+  <text x="52" y="30" font-family="Montserrat, sans-serif" font-weight="800" font-size="13" fill="#17181A">Sudden Drop Alert</text>
+  <text x="20" y="66" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#5C6B6D">-38L in 6 minutes</text>
+  <text x="20" y="84" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#5C6B6D">Location: Depot lot, overnight</text>
+  <text x="20" y="102" font-family="Montserrat, sans-serif" font-weight="700" font-size="11" fill="#F99E4B">Fleet manager notified</text>
+</g>
+<g transform="translate(530,300)">
+  <rect width="220" height="90" rx="16" fill="#F2FBFC" opacity="0.9"/>
+  <circle cx="28" cy="30" r="9" fill="#1E8E5A"/>
+  <text x="46" y="34" font-family="Montserrat, sans-serif" font-weight="700" font-size="12" fill="#17181A">GPS-linked event</text>
+  <text x="20" y="62" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#5C6B6D">43.65°N, 79.38°W</text>
+  <text x="20" y="78" font-family="Montserrat, sans-serif" font-weight="600" font-size="11" fill="#5C6B6D">Timestamped &amp; logged</text>
+</g>
+</svg>
