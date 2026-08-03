@@ -12,5 +12,9 @@
   <url><loc>https://www.trackingme.ca/partners.html</loc><priority>0.7</priority></url>
   <url><loc>https://www.trackingme.ca/about.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.trackingme.ca/resources.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.trackingme.ca/blog.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.trackingme.ca/blog/bc-dashcam-law.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.trackingme.ca/blog/eld-compliance-canada.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.trackingme.ca/blog/fuel-theft-prevention.html</loc><priority>0.6</priority></url>
   <url><loc>https://www.trackingme.ca/contact.html</loc><priority>0.7</priority></url>
 </urlset>

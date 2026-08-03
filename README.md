@@ -12,6 +12,8 @@ partners.html            Reseller / affiliate / installer program + application 
 contact.html             Smart lead-generation form
 about.html
 resources.html           FAQ hub (FAQPage schema)
+blog.html                Blog index (3 full articles + coming-soon teasers)
+blog/                    Full articles: ELD compliance, B.C. dashcam law, fuel theft prevention
 privacy-policy.html      PIPEDA-oriented privacy policy incl. in-cab video/audio consent
 terms.html
 css/style.css            Design system (design tokens, components)
