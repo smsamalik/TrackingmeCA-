@@ -42,13 +42,15 @@ repo. The site was updated to match:
   (`css/fonts/`, ~57KB total for the full weight range + italic) so the
   mandated typeface loads with no third-party font request.
 - **Logo** — `assets/logo-full-color.png` (header, on white) and
-  `assets/logo-white.png` (footer/dark sections) were generated from the
-  client's official JPG exports by trimming and de-matting them to
-  transparent PNGs — no artwork was redrawn or altered, per the guideline's
-  "do not edit the logo" rule. `assets/favicon-*.png` / `apple-touch-icon.png`
-  crop just the icon mark (favicons necessarily can't fit the wordmark); the
-  guidelines reserve icon-alone usage for the marketing team, so please have
-  them confirm that exception. The horizontal lockup mentioned in the
+  `assets/logo-white.png` (footer/dark sections) are extracted directly from
+  the true vector paths in the client's `brand-source/Tracking Canada_Logo.pdf`
+  (via PyMuPDF → SVG → transparent PNG), not redrawn or traced — so edges are
+  pixel-perfect at any size, with no JPEG compression artifacts. No artwork
+  was altered, per the guideline's "do not edit the logo" rule.
+  `assets/favicon-*.png` / `apple-touch-icon.png` crop just the icon mark
+  from the same vector source (favicons necessarily can't fit the wordmark);
+  the guidelines reserve icon-alone usage for the marketing team, so please
+  have them confirm that exception. The horizontal lockup mentioned in the
   guidelines (icon beside wordmark) wasn't included in the uploaded files —
   only the stacked "Main Version" was, so that's what's used sitewide, sized
   to stay legible in the nav header.
