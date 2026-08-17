@@ -1,0 +1,71 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}index.html#solutions" style="color:#cfe0f2;">Solutions</a> / Fuel Monitoring</p>
+    <span class="hero-eyebrow">⛽ Fuel Monitoring</span>
+    <h1>Stop Fuel Loss Before It Hits Your Bottom Line</h1>
+    <p>Fuel-level sensing and GPS-linked event tracking to catch theft, monitor consumption and understand true fuel efficiency across your fleet.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Request a Fuel Monitoring Assessment</a>
+      <a href="#faq" class="btn btn-ghost-light">Fuel Monitoring FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Core Capabilities</span>
+      <h2>See Every Fill, Drain and Drop</h2>
+      <ul class="feature-list">
+        <li>Capacitive and compatible fuel-level sensors</li>
+        <li>Fuel theft detection</li>
+        <li>Filling and draining reports</li>
+        <li>Fuel consumption monitoring</li>
+        <li>Sudden fuel-drop alerts</li>
+        <li>GPS location linked with every fuel event</li>
+        <li>BLE or wired sensor connectivity</li>
+        <li>Driver and vehicle fuel-efficiency reports</li>
+        <li>Integration with fleet dashboards</li>
+      </ul>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/fuel-tank-sensor.svg" alt="Fuel tank level sensor diagram with sudden-drop theft alert">
+      <span class="pf-cap">Sudden fuel-drop alerts, linked to GPS location and time.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Truck Fuel Theft Detection</span>
+      <h2>Catch Fuel Theft Before It Becomes a Pattern</h2>
+      <p class="section-lead">Sudden fuel-drop alerts, tied to precise GPS location and timestamp, help you identify siphoning or unauthorized draining fast — with a documented event trail.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">FAQ</span><h2>Fuel Monitoring Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">What sensors are compatible? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">TrackingmeCA supports capacitive fuel sensors and other compatible sensor types, connected via BLE or a wired interface. Compatibility depends on tank type and vehicle configuration.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How fast are theft alerts sent? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Sudden fuel-drop alerts are designed to notify fleet managers promptly after a qualifying drop is detected, subject to sensor and connectivity conditions.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Find Out Where Your Fuel Budget Is Leaking</h2>
+    <p>Request a free fuel monitoring assessment for your fleet.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Request a Fuel Monitoring Assessment</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}index.html#solutions" style="color:#cfe0f2;">Solutions</a> / Cold-Chain Monitoring</p>
+    <span class="hero-eyebrow">🌡️ Cold-Chain Monitoring</span>
+    <h1>Protect Every Degree, From Dock to Delivery</h1>
+    <p>Real-time temperature and humidity monitoring for refrigerated trucks and trailers, with proof of compliance whenever you need it.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Protect Your Cold Chain</a>
+      <a href="#faq" class="btn btn-ghost-light">Cold-Chain FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Core Capabilities</span>
+      <h2>Continuous Visibility, End to End</h2>
+      <ul class="feature-list">
+        <li>Real-time temperature and humidity monitoring</li>
+        <li>Purpose-built for refrigerated trucks and trailers</li>
+        <li>Multi-zone cargo monitoring</li>
+        <li>Wireless BLE sensors</li>
+        <li>Door-open alerts</li>
+        <li>Temperature-excursion alerts</li>
+        <li>Historical reports for proof of temperature compliance</li>
+        <li>Notifications by email, SMS or mobile app</li>
+      </ul>
+      <p class="compare-note">Hardware includes 4G wireless remote sensors (e.g., Elitech RCW-360Pro class devices) with on-device display and app/cloud data storage, so temperature history is available even if a unit temporarily loses signal.</p>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/coldchain-gauge.svg" alt="Cold-chain monitoring dashboard showing temperature, humidity and door status">
+      <span class="pf-cap">Continuous temperature and humidity monitoring, zone by zone.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Built For</span>
+      <h2>Temperature-Sensitive Logistics of Every Kind</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">🍎</div><h3>Food &amp; Beverage</h3><p>Freshness protection across the delivery chain.</p></div>
+      <div class="solution-card"><div class="sc-icon">💊</div><h3>Pharmaceutical</h3><p>Temperature-sensitive medication and supplies.</p></div>
+      <div class="solution-card"><div class="sc-icon">🏥</div><h3>Healthcare</h3><p>Clinical samples and medical cold-chain logistics.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚛</div><h3>Cold-Chain Carriers</h3><p>Multi-client reefer fleets needing proof of compliance.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">FAQ</span><h2>Cold-Chain Monitoring Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">Can I monitor multiple temperature zones in one trailer? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — multi-zone monitoring supports trailers with separate compartments for different temperature ranges.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How do I prove compliance for a delivery? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Historical temperature and humidity reports can be exported to document conditions for a specific trip or delivery window.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Do sensors need a wired power connection? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Most sensors are wireless (BLE) and battery-powered, simplifying installation across trailers and cargo areas.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Protect Your Cold Chain, Start to Finish</h2>
+    <p>Talk to a fleet advisor about temperature monitoring for your fleet.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Protect Your Cold Chain</a>
+  </div>
+</section>
+
+{% endblock %}

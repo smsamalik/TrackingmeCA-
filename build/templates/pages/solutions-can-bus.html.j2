@@ -1,0 +1,72 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}index.html#solutions" style="color:#cfe0f2;">Solutions</a> / CAN Bus &amp; Vehicle Data</p>
+    <span class="hero-eyebrow">🔧 CAN Bus &amp; Vehicle Data</span>
+    <h1>Turn Engine Data Into Maintenance Decisions</h1>
+    <p>Pull diagnostics, fault codes and operating data directly from the vehicle's CAN Bus to plan maintenance before small issues become costly breakdowns.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Talk to a Fleet Advisor</a>
+      <a href="#faq" class="btn btn-ghost-light">CAN Bus FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Core Capabilities</span>
+      <h2>Deep Vehicle Diagnostics, In One Dashboard</h2>
+      <ul class="feature-list">
+        <li>Vehicle diagnostics and real-time health data</li>
+        <li>Odometer and engine-hour readings</li>
+        <li>Engine fault codes</li>
+        <li>Fuel consumption data</li>
+        <li>RPM, speed and operating data</li>
+        <li>Power take-off (PTO) monitoring</li>
+        <li>Maintenance planning based on real usage data</li>
+      </ul>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/can-bus-gauges.svg" alt="Vehicle diagnostics gauge cluster showing speed, RPM, fuel and engine temperature">
+      <span class="pf-cap">Engine diagnostics and fault codes, pulled straight from the vehicle.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Compatibility</span>
+      <h2>Built for a Wide Range of Vehicles</h2>
+      <p class="section-lead">Integrates with compatible passenger vehicles, trucks, buses and heavy equipment.</p>
+    </div>
+    <div class="disclaimer-box reveal">
+      <strong>Compatibility note:</strong> Available CAN Bus data points depend on the vehicle's make, model, model year and the CAN integration method used. Not all data listed above is available on every vehicle. Our team will confirm compatibility for your specific fleet before installation.
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">FAQ</span><h2>CAN Bus Data Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">Will this work with my vehicle? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Compatibility depends on make, model, model year and CAN integration method. Contact us with your vehicle list and we'll confirm what's supported.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Does this replace my maintenance software? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">No — CAN Bus data is designed to feed maintenance planning and can often integrate with existing maintenance workflows, but it is not a replacement for professional inspection.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Get Ahead of Maintenance Issues</h2>
+    <p>Talk to a fleet advisor about CAN Bus integration for your vehicles.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Talk to a Fleet Advisor</a>
+  </div>
+</section>
+
+{% endblock %}

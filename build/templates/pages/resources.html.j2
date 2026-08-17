@@ -1,0 +1,47 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">📚 Resources</span>
+    <h1>Fleet Telematics Resources &amp; FAQ</h1>
+    <p>Straight answers about ELD compliance, AI dashcams, GPS tracking, fuel monitoring, CAN Bus integration and cold-chain monitoring for Canadian fleets.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid grid-4 reveal">
+      <a class="solution-card" href="eld-canada/"><div class="sc-icon">📋</div><h3>ELD Solutions Canada</h3><p>Understand Canadian ELD compliance requirements.</p></a>
+      <a class="solution-card" href="fleet-dashcam-canada/#bc"><div class="sc-icon">🎥</div><h3>B.C. Commercial Vehicle Dashcams</h3><p>What's confirmed about B.C.'s dashcam legislation.</p></a>
+      <a class="solution-card" href="{{ root }}solutions/fuel-monitoring.html"><div class="sc-icon">⛽</div><h3>Truck Fuel Theft Detection</h3><p>How fuel monitoring catches theft and waste.</p></a>
+      <a class="solution-card" href="{{ root }}solutions/cold-chain.html"><div class="sc-icon">🌡️</div><h3>Refrigerated Truck Monitoring</h3><p>Proof of temperature compliance for cold-chain loads.</p></a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">FAQ</span><h2>Common Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">What is an ELD, and is it mandatory in Canada? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">An Electronic Logging Device (ELD) records a driver's Hours of Service electronically. Federal ELD mandates apply to most commercial motor vehicle drivers required to keep records of duty status. Confirm your specific obligations with the applicable transportation authority, and confirm certification status for any specific device before relying on it for compliance.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Does TrackingmeCA serve small fleets and owner-operators? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — flexible packages are available for fleets of every size, from a single truck to national enterprise fleets.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Can I combine ELD, dashcams and GPS tracking in one platform? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — ELD, AI dashcams, GPS tracking, fuel monitoring, CAN Bus data and cold-chain monitoring can all be managed from a single dashboard.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Is there a cost to get a quote? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">No — fleet consultations and quotes are free and come with no obligation.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Does TrackingmeCA install hardware across Canada? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — professional installation is available Canada-wide through our installer network, in-shop or on-site.</div></div></div>
+      <div class="faq-item"><button class="faq-q">How is driver video and data privacy protected? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">See our <a href="{{ root }}privacy-policy.html#video-consent">Privacy Policy</a> for details on how in-cab video, audio and telematics data are collected, retained, accessed and protected, including PIPEDA and applicable provincial privacy considerations.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Still Have Questions?</h2>
+    <p>Talk to a Canadian fleet advisor — no obligation, no pressure.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

@@ -14,7 +14,7 @@ eld-canada/               ELD Canada (generated)
 eld-dashcam-canada/       ELD + Dashcam bundle, the flagship conversion page (generated)
 fleet-dashcam-canada/     AI dashcams / video telematics (generated)
 gps-fleet-tracking-canada/  GPS fleet tracking (generated)
-solutions/                Driver monitoring, CAN Bus, fuel monitoring, cold-chain (hand-authored, URLs kept)
+solutions/                Driver monitoring, CAN Bus, fuel monitoring, cold-chain (generated, URLs kept)
 industries/               Hub + trucking, logistics, construction, courier-delivery, towing,
                           field-service, cold-chain (generated)
 installation-network/    Canada installation coverage (generated)
@@ -24,9 +24,9 @@ cross-border-fleet/      Canada-U.S. cross-border considerations (generated)
 integrations/            Integration categories; intentionally lists no specific partners
                           until confirmed (generated)
 careers/                 Careers page; ships with zero fake listings (generated)
-contact.html             Smart lead-generation form (hand-authored)
-about.html, resources.html, blog.html, blog/  (hand-authored, unchanged this pass)
-privacy-policy.html, terms.html               (hand-authored, unchanged this pass)
+contact.html             Smart lead-generation form (generated)
+about.html, resources.html, blog.html, blog/  (generated)
+privacy-policy.html, terms.html               (generated; legal text itself untouched)
 _redirects                Netlify/Cloudflare Pages-style 301 map for retired URLs
 solutions/eld.html, solutions/dashcams.html,  Meta-refresh + noindex redirect stubs
 solutions/gps-tracking.html, industries.html  (see "Redirect map" below)
@@ -41,13 +41,17 @@ brand-source/             Original client-uploaded files — kept for reference,
 robots.txt, sitemap.xml
 ```
 
+Every page in the site (31 in total) is now generated from the same
+header/mega-menu/footer/mobile-CTA-bar partial — there is no page left on
+the old single-column nav.
+
 ## Templated pages
 
-Every page listed as "(generated)" above is rendered by `build/build.py` from
+Every page above is rendered by `build/build.py` from
 `build/templates/base.html.j2` (shared header/mega-menu/footer/mobile CTA bar)
 plus a per-page template in `build/templates/pages/`. Page metadata (title,
 description, canonical, JSON-LD) lives in the `PAGES` list in `build.py`
-itself — that list is also the authoritative SEO map for these pages.
+itself — that list is also the authoritative SEO map for the site.
 
 To rebuild after editing a template or `build/data/site.json`:
 
@@ -56,11 +60,17 @@ pip install -r build/requirements.txt   # once
 python3 build/build.py
 ```
 
-This is the *only* thing that writes the generated paths above — every
-hand-authored page (solutions/driver-monitoring.html, about.html, blog/*,
-etc.) is untouched by it. Seven industry pages share one generic template
-(`industry.html.j2`) driven by per-industry data in `build.py`'s
-`industry_page()` calls, rather than seven near-duplicate files.
+This is the *only* thing that writes the site's HTML files — edit the
+`.j2` template or the `PAGES` entry in `build.py`, then rebuild; editing the
+generated `.html` output directly will be overwritten on the next build.
+Seven industry pages share one generic template (`industry.html.j2`) driven
+by per-industry data in `build.py`'s `industry_page()` calls, rather than
+seven near-duplicate files. Pages carried over from the original site
+(about.html, contact.html, blog.html + articles, the four kept solutions
+pages, privacy-policy.html, terms.html) were migrated into this system by
+extracting their existing `<main>` content as-is into a `.j2` template and
+rewriting only their internal links and brand mentions — the page copy
+itself is unchanged from before this pass, only the nav/footer/links are new.
 
 ## Redirect map
 
@@ -82,18 +92,10 @@ Everything else kept its existing URL (`/solutions/driver-monitoring.html`,
 `/solutions/cold-chain.html`, `/about.html`, `/contact.html`,
 `/resources.html`, `/blog.html`, `/blog/*`, `/partners.html`,
 `/privacy-policy.html`, `/terms.html`) — nothing was redirected to the
-homepage as a catch-all.
-
-**Known gap:** internal links from the hand-authored pages that weren't
-touched this pass (about.html, resources.html, contact.html, blog.html,
-blog/*, solutions/driver-monitoring.html, solutions/can-bus.html,
-solutions/fuel-monitoring.html, solutions/cold-chain.html) still point at the
-four old URLs above and their old-style single-column nav — they'll reach the
-right page via the redirect/old nav, but not by the shortest path, and their
-header/footer don't yet match the new mega-menu. Bringing those into
-`build/build.py` as templated pages (same pattern as `partners.html`) is the
-cleanest way to close this gap; flagging it here rather than leaving it
-implicit.
+homepage as a catch-all. Every page that links to any of the four retired
+URLs now links directly to its replacement, so nothing on the site routes
+through a redirect internally — the stubs exist only to catch stale external
+links and bookmarks.
 
 ## Brand assets — now using the real TrackingMe.ca brand
 

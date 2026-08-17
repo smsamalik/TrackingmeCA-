@@ -1,0 +1,60 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}blog.html" style="color:#cfe0f2;">Blog</a> / ELD Compliance in Canada</p>
+    <span class="hero-eyebrow">📋 Compliance · ELD</span>
+    <h1>ELD Compliance in Canada: A Plain-English Guide</h1>
+    <p>What the federal ELD mandate actually requires, who it applies to, and how to avoid the compliance mistakes that catch fleets out.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container article-body">
+    <div class="article-meta">
+      <span class="blog-tag">Compliance · ELD</span>
+      <span>TrackingmeCA Team</span>
+      <span>·</span>
+      <span>7 min read</span>
+    </div>
+
+    <p>Electronic Logging Devices stopped being optional for most of the Canadian trucking industry years ago, but confusion about what they actually require hasn't gone away. Here's a straight answer to the questions fleets and owner-operators ask most.</p>
+
+    <h2>What an ELD actually does</h2>
+    <p>An ELD automatically records a driver's duty status — driving, on-duty not driving, off-duty, sleeper berth — by connecting to the vehicle's engine to capture things like movement, engine hours, and location. It replaces the paper logbook with an electronic Record of Duty Status (RODS) that's harder to falsify and faster to review at roadside.</p>
+
+    <h2>Who needs one</h2>
+    <p>Federal ELD requirements apply to most commercial motor vehicle drivers who are required to keep records of duty status under the applicable Hours of Service rules. There are limited exceptions — for example, some short-haul operations and certain older vehicles may fall outside the requirement. Because eligibility depends on your specific operation, vehicle, and jurisdiction, confirm your obligations with the applicable federal or provincial transportation authority rather than assuming you're exempt.</p>
+
+    <h2>"Certified" is the word that matters</h2>
+    <p>Not every device that logs hours is a compliant ELD. To count, a device needs to run certified, approved hardware and firmware — and that certification is tied to a specific configuration, not just a brand name. This is the single most common point of confusion: a device can be a legitimate ELD in one firmware version and fall out of compliance after an update, or a specific hardware/software pairing may not be certified at all.</p>
+    <p>Before you rely on any ELD for compliance, confirm the certification status of your <em>exact</em> hardware and firmware configuration — not just "the brand we use."</p>
+
+    <h2>Common mistakes fleets make</h2>
+    <ul>
+      <li><strong>Assuming certification carries over after a hardware swap.</strong> Replacing a device or upgrading firmware can change its compliance status. Re-verify after any change.</li>
+      <li><strong>Treating DVIRs as an afterthought.</strong> Driver Vehicle Inspection Reports are part of the compliance picture, not a separate checkbox — make sure your ELD platform actually tracks them, not just Hours of Service.</li>
+      <li><strong>Ignoring real-time violation alerts.</strong> A good ELD platform flags HOS violations before they happen, not just after a roadside inspection catches them. If your dispatcher isn't seeing these alerts, you're leaving a compliance safety net unused.</li>
+      <li><strong>Skipping driver training.</strong> An ELD is only as compliant as the driver using it. Malformed logs, missed co-driver handoffs, and unassigned driving time are usually training gaps, not software bugs.</li>
+    </ul>
+
+    <h2>IFTA reporting</h2>
+    <p>Most ELD platforms, including TrackingmeCA's, offer IFTA reporting support to help simplify fuel-tax filing by tracking mileage by jurisdiction. That said, IFTA obligations are ultimately yours to meet — confirm your specific filing requirements with your tax advisor or the relevant provincial authority.</p>
+
+    <div class="disclaimer-box">
+      <strong>Compliance disclaimer:</strong> This article is general information, not legal or regulatory advice. ELD compliance claims apply only to certified and approved hardware/firmware configurations, used and installed as directed. Confirm current certification status and your specific obligations with the applicable transportation authority before relying on any device for regulatory compliance.
+    </div>
+
+    <p>Looking for an ELD built for both owner-operators and larger fleets? See our <a href="../eld-canada/">ELD compliance page</a> or <a href="{{ root }}contact.html">request a free demo</a>.</p>
+
+    <div class="article-share">
+      <a href="../eld-canada/" class="btn btn-primary btn-sm">Explore ELD Compliance →</a>
+      <a href="{{ root }}contact.html" class="btn btn-outline btn-sm">Request a Demo</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
