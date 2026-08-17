@@ -1,0 +1,84 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / GPS Fleet Tracking</p>
+    <span class="hero-eyebrow">📍 GPS Fleet Tracking Canada</span>
+    <h1>Real-Time GPS Fleet Tracking for Canadian Businesses</h1>
+    <p>Vehicle, trailer and equipment visibility — geofences, route history, idle monitoring and utilization reporting, for commercial fleets of every size.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Get Fleet Pricing</a>
+      <a href="#faq" class="btn btn-ghost-light">GPS Tracking FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Core Capabilities</span>
+      <h2>See Every Vehicle, In Real Time</h2>
+      <ul class="feature-list">
+        <li>Real-time vehicle location</li>
+        <li>Route history and trip playback</li>
+        <li>Geofences with entry/exit alerts</li>
+        <li>Unauthorized-use alerts</li>
+        <li>Idling reports</li>
+        <li>Maintenance reminders based on mileage or engine hours</li>
+        <li>Driver behaviour reports</li>
+        <li>Fleet utilization dashboards</li>
+        <li>Asset, trailer, equipment and vehicle tracking</li>
+      </ul>
+      <p class="compare-note">Select plug-and-play trackers are available with free monitoring and a free SIM card included, with no monthly subscription or SIM charges — a one-time hardware payment instead of a recurring fee. Ask your fleet advisor which pricing model fits your fleet.</p>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/mockup-fleet-map.svg" alt="Fleet GPS tracking map dashboard mockup with route and geofence">
+      <span class="pf-cap">Live vehicle locations, geofences and route history on one map.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Track More Than Trucks</span>
+      <h2>Vehicles, Trailers, Equipment and Assets</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">🚚</div><h3>Vehicles</h3><p>Cars, vans, straight trucks and tractors.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚛</div><h3>Trailers</h3><p>Dry van, reefer and flatbed trailer tracking.</p></div>
+      <div class="solution-card"><div class="sc-icon">🏗️</div><h3>Heavy Equipment</h3><p>Construction and job-site equipment tracking.</p></div>
+      <div class="solution-card"><div class="sc-icon">📦</div><h3>Portable Assets</h3><p>Battery-powered trackers for containers and gear.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <span class="section-kicker">Better Together</span>
+    <h2>GPS Alone, or GPS + ELD + Video</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">Start with location tracking and add compliance or video whenever you're ready — no need to switch systems later.</p>
+    <a href="{{ root }}eld-dashcam-canada/" class="btn btn-outline">See ELD + Dashcam</a>
+  </div>
+</section>
+
+<section id="faq" class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>GPS Tracking Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {{ m.faq_item("How often does the map update?", "Update frequency depends on the hardware and plan selected; most configurations report location in near real time while the vehicle is moving.") }}
+      {{ m.faq_item("Can I track trailers without power?", "Yes &mdash; battery-powered asset trackers are available for trailers, containers and equipment that don't have a constant power source.") }}
+      {{ m.faq_item("Is there a mobile app?", "Yes &mdash; fleet managers and, where enabled, drivers can access location, alerts and reports from the web dashboard or mobile app.") }}
+      {{ m.faq_item("Does GPS tracking work for fleets under 10 vehicles?", "Yes &mdash; our packages are built primarily for 2-50 vehicle fleets, and scale to larger deployments.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Know Where Your Fleet Is, Always.", "Get pricing for your fleet, or book a free fleet review first if you're not sure what you need.", "Get Fleet Pricing", root ~ "contact.html", "Book a Free Fleet Review", root ~ "index.html#review") }}
+</section>
+
+{% endblock %}

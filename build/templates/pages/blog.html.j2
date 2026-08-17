@@ -1,0 +1,126 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">📰 Blog</span>
+    <h1>Fleet Telematics Insights for Canadian Businesses</h1>
+    <p>Practical guidance on ELD compliance, dashcam regulations, fuel theft prevention, cold-chain monitoring and fleet technology — written for fleet managers and owner-operators, not lawyers.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head left reveal" style="max-width:none;">
+      <span class="section-kicker">Latest</span>
+      <h2>Featured Article</h2>
+    </div>
+    <a class="blog-card blog-featured reveal" href="{{ root }}blog/bc-dashcam-law.html" style="text-decoration:none;">
+      <div class="photo-frame" style="--ar:auto;aspect-ratio:auto;height:100%;">
+        <img class="pf-graphic" src="{{ root }}assets/infographics/dashcam-coverage.svg" alt="Diagram showing forward-facing dashcam coverage on a commercial vehicle">
+      </div>
+      <div class="blog-card-body">
+        <span class="blog-tag">Compliance · British Columbia</span>
+        <h2>B.C.'s New Dashcam Law: What Commercial Fleets Need to Know</h2>
+        <p class="blog-excerpt">Bill M217 passed third reading in May 2026 and will require forward-facing dashcams on heavy commercial vehicles operating in B.C. Here's what's confirmed, what's still pending, and how to prepare.</p>
+        <div class="blog-meta"><span>TrackingmeCA Team</span><span>·</span><span>8 min read</span></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head left reveal" style="max-width:none;">
+      <span class="section-kicker">All Articles</span>
+      <h2>Guides &amp; Explainers</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+
+      <a class="blog-card" href="{{ root }}blog/eld-compliance-canada.html" style="text-decoration:none;">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/eld-hos-dashboard.svg" alt="ELD Hours of Service dashboard mockup">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Compliance · ELD</span>
+          <h3>ELD Compliance in Canada: A Plain-English Guide</h3>
+          <p class="blog-excerpt">What the federal ELD mandate actually requires, who it applies to, and how to avoid the most common compliance mistakes.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span><span>·</span><span>7 min read</span></div>
+        </div>
+      </a>
+
+      <a class="blog-card" href="{{ root }}blog/fuel-theft-prevention.html" style="text-decoration:none;">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/fuel-tank-sensor.svg" alt="Fuel tank level sensor diagram with theft alert">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Fuel Management</span>
+          <h3>How to Stop Fuel Theft in Your Fleet</h3>
+          <p class="blog-excerpt">Fuel theft is one of the most under-reported leaks in fleet budgets. Here's how sensor-based monitoring catches it — and what to do when it does.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span><span>·</span><span>6 min read</span></div>
+        </div>
+      </a>
+
+      <div class="blog-card blog-card-soon">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/coldchain-gauge.svg" alt="Cold-chain temperature monitoring dashboard mockup">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Coming Soon</span>
+          <h3>Cold-Chain Compliance: What Canadian Shippers Need to Know</h3>
+          <p class="blog-excerpt">A practical look at temperature-monitoring recordkeeping for food and pharmaceutical logistics in Canada.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span></div>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-soon">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/mockup-fleet-map.svg" alt="Fleet GPS tracking map dashboard mockup">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Coming Soon</span>
+          <h3>GPS Tracking ROI: How Fleets Actually Cut Costs</h3>
+          <p class="blog-excerpt">Idling, unauthorized use and route inefficiency add up fast. A look at where GPS tracking pays for itself first.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span></div>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-soon">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/can-bus-gauges.svg" alt="Vehicle diagnostics gauge cluster dashboard mockup">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Coming Soon</span>
+          <h3>CAN Bus Data 101: Turning Engine Data Into Maintenance Savings</h3>
+          <p class="blog-excerpt">What CAN Bus data actually tells you, and how to use it to catch maintenance issues before they become breakdowns.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span></div>
+        </div>
+      </div>
+
+      <div class="blog-card blog-card-soon">
+        <div class="photo-frame" style="--ar:16/10">
+          <img class="pf-graphic" src="{{ root }}assets/infographics/driver-monitoring-icons.svg" alt="AI driver monitoring risk-detection diagram">
+        </div>
+        <div class="blog-card-body">
+          <span class="blog-tag">Coming Soon</span>
+          <h3>Driver Coaching That Actually Works: Using AI Safety Scores</h3>
+          <p class="blog-excerpt">How to turn driver-monitoring alerts into a coaching program drivers respect instead of resent.</p>
+          <div class="blog-meta"><span>TrackingmeCA Team</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container cta-band">
+    <h2>Have a Topic You Want Covered?</h2>
+    <p>Tell us what's on your mind — compliance questions, hardware comparisons, or fleet management challenges.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Contact Us</a>
+  </div>
+</section>
+
+{% endblock %}

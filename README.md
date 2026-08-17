@@ -1,29 +1,101 @@
-# TrackingMe.ca Website
+# TrackingmeCA Website
 
-A static, multi-page, SEO-ready marketing website for TrackingMe.ca, a Canadian fleet telematics company. No build step or dependencies — open `index.html` directly or serve the folder with any static file host.
+A static, multi-page, SEO-ready marketing website for Trackingme Ltd. (TrackingmeCA), a Canadian fleet technology company (ELD, GPS, AI dashcams, installation). No runtime build step or dependencies to *serve* the site — open `index.html` directly or serve the folder with any static file host. A small Jinja2 build step (see below) generates the pages listed under "Templated pages" from shared partials, so the *source* doesn't require hand-copying the header/footer into every file.
+
+## 2026 repositioning
+
+The site was rebuilt around a new commercial strategy: TrackingmeCA as "Canada's practical fleet technology partner" (ELD + GPS + video, professionally installed and Canadian-supported) rather than a generic telematics vendor. See the [rebuild manifest](https://claude.ai/code/artifact/87a3be7d-311e-4192-a858-dd2ee4fb944a) for the audit, sitemap, wireframe, design-system and SEO-map this was built against.
 
 ## Structure
 
 ```
-index.html              Homepage (18 sections per the site brief)
-solutions/               ELD, dashcams, driver monitoring, GPS, CAN Bus, fuel, cold-chain
-industries.html          13 industry sections
-partners.html            Reseller / affiliate / installer program + application form
-contact.html             Smart lead-generation form
-about.html
-resources.html           FAQ hub (FAQPage schema)
-blog.html                Blog index (3 full articles + coming-soon teasers)
-blog/                    Full articles: ELD compliance, B.C. dashcam law, fuel theft prevention
-privacy-policy.html      PIPEDA-oriented privacy policy incl. in-cab video/audio consent
-terms.html
-css/style.css            Design system (design tokens, components)
-css/fonts/               Self-hosted Montserrat (brand-mandated typeface)
-js/main.js               Nav, dropdowns, FAQ accordion, tabs, reveal-on-scroll, form UX
-assets/                  Real brand logo exports (see below) + favicons
-brand-source/            Original files uploaded by the client (brand guidelines PDF,
-                         logo JPGs/PNG/PDF) — kept for reference, not linked from any page
+index.html               Homepage — generated, see build/templates/pages/index.html.j2
+eld-canada/               ELD Canada (generated)
+eld-dashcam-canada/       ELD + Dashcam bundle, the flagship conversion page (generated)
+fleet-dashcam-canada/     AI dashcams / video telematics (generated)
+gps-fleet-tracking-canada/  GPS fleet tracking (generated)
+solutions/                Driver monitoring, CAN Bus, fuel monitoring, cold-chain (generated, URLs kept)
+industries/               Hub + trucking, logistics, construction, courier-delivery, towing,
+                          field-service, cold-chain (generated)
+installation-network/    Canada installation coverage (generated)
+become-an-installer/     Installer recruitment + application form (generated)
+partners.html            Reseller / affiliate / installer referral program (generated)
+cross-border-fleet/      Canada-U.S. cross-border considerations (generated)
+integrations/            Integration categories; intentionally lists no specific partners
+                          until confirmed (generated)
+careers/                 Careers page; ships with zero fake listings (generated)
+contact.html             Smart lead-generation form (generated)
+about.html, resources.html, blog.html, blog/  (generated)
+privacy-policy.html, terms.html               (generated; legal text itself untouched)
+_redirects                Netlify/Cloudflare Pages-style 301 map for retired URLs
+solutions/eld.html, solutions/dashcams.html,  Meta-refresh + noindex redirect stubs
+solutions/gps-tracking.html, industries.html  (see "Redirect map" below)
+css/style.css             Design system (design tokens, components)
+css/fonts/                Self-hosted Montserrat (brand-mandated typeface)
+js/main.js                Nav, dropdowns, FAQ accordion, tabs, reveal-on-scroll, lead-form submit
+js/lead-config.js         Google Sheets Apps Script endpoint (see "Lead capture setup")
+tools/apps-script/Code.gs Apps Script source for the lead-capture Sheet
+assets/                   Real brand logo exports + favicons + SVG infographics
+build/                    Jinja2 templates + build.py (see "Templated pages" below)
+brand-source/             Original client-uploaded files — kept for reference, not linked
 robots.txt, sitemap.xml
 ```
+
+Every page in the site (31 in total) is now generated from the same
+header/mega-menu/footer/mobile-CTA-bar partial — there is no page left on
+the old single-column nav.
+
+## Templated pages
+
+Every page above is rendered by `build/build.py` from
+`build/templates/base.html.j2` (shared header/mega-menu/footer/mobile CTA bar)
+plus a per-page template in `build/templates/pages/`. Page metadata (title,
+description, canonical, JSON-LD) lives in the `PAGES` list in `build.py`
+itself — that list is also the authoritative SEO map for the site.
+
+To rebuild after editing a template or `build/data/site.json`:
+
+```
+pip install -r build/requirements.txt   # once
+python3 build/build.py
+```
+
+This is the *only* thing that writes the site's HTML files — edit the
+`.j2` template or the `PAGES` entry in `build.py`, then rebuild; editing the
+generated `.html` output directly will be overwritten on the next build.
+Seven industry pages share one generic template (`industry.html.j2`) driven
+by per-industry data in `build.py`'s `industry_page()` calls, rather than
+seven near-duplicate files. Pages carried over from the original site
+(about.html, contact.html, blog.html + articles, the four kept solutions
+pages, privacy-policy.html, terms.html) were migrated into this system by
+extracting their existing `<main>` content as-is into a `.j2` template and
+rewriting only their internal links and brand mentions — the page copy
+itself is unchanged from before this pass, only the nav/footer/links are new.
+
+## Redirect map
+
+Four URLs were replaced by clean, keyword-qualified equivalents. Rather than
+deleting the old indexed URLs, each retired path is now a `noindex` stub with
+`rel=canonical` and an instant meta-refresh to its replacement, and the same
+mapping is duplicated in `_redirects` for hosts that honour that format
+(Netlify, Cloudflare Pages):
+
+| Old URL | New URL |
+|---|---|
+| `/solutions/eld.html` | `/eld-canada/` |
+| `/solutions/dashcams.html` | `/fleet-dashcam-canada/` |
+| `/solutions/gps-tracking.html` | `/gps-fleet-tracking-canada/` |
+| `/industries.html` | `/industries/` |
+
+Everything else kept its existing URL (`/solutions/driver-monitoring.html`,
+`/solutions/can-bus.html`, `/solutions/fuel-monitoring.html`,
+`/solutions/cold-chain.html`, `/about.html`, `/contact.html`,
+`/resources.html`, `/blog.html`, `/blog/*`, `/partners.html`,
+`/privacy-policy.html`, `/terms.html`) — nothing was redirected to the
+homepage as a catch-all. Every page that links to any of the four retired
+URLs now links directly to its replacement, so nothing on the site routes
+through a redirect internally — the stubs exist only to catch stale external
+links and bookmarks.
 
 ## Brand assets — now using the real TrackingMe.ca brand
 
@@ -94,9 +166,37 @@ repo. The site was updated to match:
   unverifiable "cheaper than X" statements per the brief.
 - **Testimonials / case studies** — placeholder cards, explicitly labeled "pending
   customer approval," ready to swap for real quotes.
-- **Lead-routing** — `js/main.js` intercepts form submits and shows a confirmation
-  message client-side only. Wire the `data-lead-form` submit handler to a real
-  CRM/lead-routing endpoint before launch.
+- **Lead-routing** — wired to a Google Sheet, not yet deployed (see "Lead capture
+  setup" below). Until the Apps Script Web App is deployed, submissions are
+  logged to the browser console instead of sent anywhere — nothing is lost, but
+  nothing is delivered either.
+
+## Lead capture setup
+
+Every form with a `data-lead-form` attribute (homepage quote form, `contact.html`,
+`partners.html` partner application, and any new lead forms added later) submits
+to a Google Sheet acting as the CRM, via a Google Apps Script Web App. Each
+submission is also emailed to `info@trackingme.ca`.
+
+1. Create (or open) a Google Sheet to hold leads.
+2. In that Sheet: **Extensions → Apps Script**, delete the boilerplate, and
+   paste in the contents of `tools/apps-script/Code.gs`.
+3. **Deploy → New deployment**, type **Web app**, execute as **Me**, access
+   **Anyone**. Authorize the requested permissions (it needs to write to the
+   Sheet and send email as you).
+4. Copy the deployment URL and paste it into `js/lead-config.js` as
+   `LEAD_ENDPOINT`, replacing the `REPLACE_WITH_APPS_SCRIPT_WEB_APP_URL`
+   placeholder. That's the only code change needed.
+5. If `Code.gs` is edited later, create a **new version** under **Manage
+   deployments** — editing the script doesn't update a live deployment on its
+   own.
+
+A `Leads` sheet tab is created automatically on first submission, with one
+column per field collected across the site's forms (name, company, fleet
+size, current provider, timeline, UTM parameters, landing page, etc.) — see
+the `COLUMNS` list in `Code.gs` for the exact schema. Every form also carries
+a hidden `_gotcha` honeypot field; a filled-in honeypot is treated as spam and
+the submission is dropped client-side before it reaches the endpoint.
 
 ## Compliance notes (please review before publishing)
 

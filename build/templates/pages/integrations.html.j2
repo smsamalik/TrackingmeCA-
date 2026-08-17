@@ -1,0 +1,46 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / Integrations</p>
+    <span class="hero-eyebrow">🔗 Integrations</span>
+    <h1>Connecting Fleet Data to the Rest of Your Business</h1>
+    <p>We're building out confirmed integrations across ELD platforms, fleet management tools, hardware, cameras, sensors and business systems.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Categories</span>
+      <h2>Where Integrations Are Headed</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">📋</div><h3>ELD Platforms</h3><p>Compatible logging and compliance systems.</p></div>
+      <div class="solution-card"><div class="sc-icon">🗺️</div><h3>Fleet Management</h3><p>Dispatch and fleet-management software.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔧</div><h3>Hardware</h3><p>Compatible ELD, GPS and sensor devices.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎥</div><h3>Cameras</h3><p>Dashcam and video telematics hardware.</p></div>
+      <div class="solution-card"><div class="sc-icon">🌡️</div><h3>Sensors</h3><p>Temperature, fuel and door sensors.</p></div>
+      <div class="solution-card"><div class="sc-icon">⚙️</div><h3>APIs</h3><p>Programmatic access to fleet data.</p></div>
+      <div class="solution-card"><div class="sc-icon">💼</div><h3>ERP / Business Apps</h3><p>Connect fleet data to accounting and operations tools.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container text-center">
+    <span class="section-kicker">Current Status</span>
+    <h2>Confirmed Integrations Are Coming Soon</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">We don't list an integration here until it's been confirmed and tested &mdash; so this page is intentionally light today rather than listing partnerships that aren't real yet. If you need a specific integration, tell us and we'll confirm current compatibility.</p>
+    <a href="{{ root }}contact.html" class="btn btn-outline">Ask About a Specific Integration</a>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Need a Specific Integration?", "Tell us what you're trying to connect and we'll confirm what's possible today.", "Talk to a Fleet Specialist", root ~ "contact.html") }}
+</section>
+
+{% endblock %}

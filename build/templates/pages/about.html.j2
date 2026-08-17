@@ -1,0 +1,52 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">🍁 About TrackingmeCA</span>
+    <h1>Smarter Fleet Technology. Canadian Support. Competitive Pricing.</h1>
+    <p>TrackingmeCA exists to give Canadian fleets — from single-truck owner-operators to national enterprises — access to reliable, compliance-focused telematics without the cost and complexity of the largest providers.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Our Mission</span>
+      <h2>A Canadian Alternative, Built for Canadian Roads</h2>
+      <p>Canadian fleets operate in unique conditions — long distances, harsh winters, cross-border routes and provincial regulatory variation. TrackingmeCA was built around that reality: quality hardware, Canadian-based support, and pricing that works for fleets of every size.</p>
+      <p>We work with owner-operators, regional carriers, cold-chain distributors, municipal fleets and everything in between — matching the right combination of ELD, video telematics, GPS tracking, fuel monitoring, CAN Bus data and cold-chain monitoring to each operation's needs.</p>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/about-canada-map.svg" alt="Map showing TrackingmeCA's Canada-wide fleet service coverage">
+      <span class="pf-cap">Coast to coast — a growing installer and support network across Canada.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">What We Stand For</span>
+      <h2>Our Commitments to Canadian Fleets</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">💲</div><h3>Transparent Pricing</h3><p>Quote-based, straightforward pricing without hidden fees.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎧</div><h3>Canadian Support</h3><p>A Canadian-based team that understands your operating environment.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛠️</div><h3>Professional Installation</h3><p>Trained installers, in-shop or on-site, Canada-wide.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔒</div><h3>Compliance &amp; Security</h3><p>Certified-configuration compliance and responsible data handling.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Let's Talk About Your Fleet</h2>
+    <p>Whether you run one truck or one thousand, we'll help you find the right fit.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Request a Free Fleet Consultation</a>
+  </div>
+</section>
+
+{% endblock %}

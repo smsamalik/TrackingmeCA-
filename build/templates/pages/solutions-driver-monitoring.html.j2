@@ -1,0 +1,78 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}index.html#solutions" style="color:#cfe0f2;">Solutions</a> / Driver Monitoring (DMS)</p>
+    <span class="hero-eyebrow">🧑‍✈️ Driver Monitoring System (DMS)</span>
+    <h1>AI That Watches the Road, So You Don't Have To Guess</h1>
+    <p>AI-assisted driver monitoring identifies risky behaviour as it happens and delivers real-time alerts to help drivers self-correct and fleet managers coach proactively.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Book a Dashcam &amp; DMS Demonstration</a>
+      <a href="#faq" class="btn btn-ghost-light">DMS FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">What DMS Detects</span>
+      <h2>AI-Assisted Detection of Risky Driving Behaviour</h2>
+      <p class="section-lead">Depending on the selected hardware and platform tier, TrackingmeCA's driver monitoring can identify and report:</p>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">📱</div><h3>Mobile-Phone Use</h3><p>Detects handheld phone use while driving.</p></div>
+      <div class="solution-card"><div class="sc-icon">😴</div><h3>Yawning &amp; Fatigue</h3><p>Flags signs of driver drowsiness and fatigue.</p></div>
+      <div class="solution-card"><div class="sc-icon">👀</div><h3>Distraction &amp; Inattention</h3><p>Identifies distracted or inattentive driving patterns.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚬</div><h3>Smoking</h3><p>Detects smoking behaviour behind the wheel.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔗</div><h3>Seat Belt Compliance</h3><p>Flags failure to wear a seat belt.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛣️</div><h3>Eyes Off Road</h3><p>Detects when a driver's eyes leave the road for extended periods.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚫</div><h3>Camera Obstruction</h3><p>Alerts when the driver-facing camera is blocked or covered.</p></div>
+      <div class="solution-card"><div class="sc-icon">⚡</div><h3>Harsh Events &amp; Speeding</h3><p>Flags harsh braking, acceleration, cornering and speeding.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container split reverse">
+    <div>
+      <span class="section-kicker">Real-Time Alerts</span>
+      <h2>Alerts Where They Matter, When They Matter</h2>
+      <p class="section-lead">Depending on the selected hardware and platform, alerts can be delivered:</p>
+      <ul class="feature-list">
+        <li>To the driver in-cab, as an immediate in-vehicle audio or visual alert</li>
+        <li>To the fleet manager or dispatcher dashboard, in real time</li>
+        <li>As part of a driver safety-scoring and coaching report</li>
+      </ul>
+      <p class="compare-note">Available alert types, sensitivity and delivery channels vary by camera hardware, firmware and the platform tier selected.</p>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/driver-monitoring-icons.svg" alt="Diagram showing AI driver monitoring risk-detection categories">
+      <span class="pf-cap">AI-assisted detection across the risk factors that matter most.</span>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">FAQ</span><h2>Driver Monitoring Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      <div class="faq-item"><button class="faq-q">Does DMS record audio or only video? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">This depends on the hardware and configuration selected. Any in-cab audio or video collection is subject to driver notice and consent requirements described in our Privacy Policy.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Can drivers see their own safety score? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes — many configurations allow drivers to view their own coaching and safety-scoring data, supporting self-improvement alongside fleet-manager visibility.</div></div></div>
+      <div class="faq-item"><button class="faq-q">Is DMS sold on its own or with a dashcam? <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">DMS is typically enabled through a driver-facing AI camera as part of a dashcam package. Talk to a fleet advisor about which configuration fits your vehicles.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  <div class="container cta-band" style="background:transparent;padding:0;">
+    <h2>Reduce Risk Before It Becomes an Incident</h2>
+    <p>See driver monitoring in action and learn which hardware fits your fleet.</p>
+    <a href="{{ root }}contact.html" class="btn btn-secondary">Book a Demonstration</a>
+  </div>
+</section>
+
+{% endblock %}

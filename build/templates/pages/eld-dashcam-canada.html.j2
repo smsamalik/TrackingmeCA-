@@ -1,0 +1,108 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / ELD + Dashcam</p>
+    <span class="hero-eyebrow">🛡️ ELD + Dashcam</span>
+    <h1>ELD + Dashcam: One Connected Fleet Solution</h1>
+    <p>Bring driver compliance, ECM data, GPS and video together instead of managing separate systems.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Build My Fleet Package</a>
+      <a href="#faq" class="btn btn-ghost-light">Read the FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">How It Connects</span>
+      <h2>One Dashboard, Fed by Everything</h2>
+    </div>
+    <div class="topology reveal">
+      <div class="topology-flow">
+        <span class="tf-node">Vehicle ECM</span><span class="tf-arrow">→</span>
+        <span class="tf-node">ELD Gateway</span><span class="tf-arrow">↔</span>
+        <span class="tf-node">Driver App</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Cloud</span><span class="tf-arrow">←</span>
+        <span class="tf-node">AI Dashcam</span><span class="tf-arrow">→</span>
+        <span class="tf-node tf-node--end">Fleet Dashboard</span>
+      </div>
+      <div class="topology-outcomes">
+        <span class="to-chip">HOS</span>
+        <span class="to-chip">GPS</span>
+        <span class="to-chip">ECM</span>
+        <span class="to-chip">Video</span>
+        <span class="to-chip">Safety</span>
+        <span class="to-chip">IFTA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container split">
+    <div>
+      <span class="section-kicker">What's Included</span>
+      <h2>Compliance + Video Evidence + Fleet Visibility</h2>
+      <ul class="feature-list">
+        <li>ELD — Hours of Service &amp; DVIR</li>
+        <li>Real-time GPS location</li>
+        <li>4G LTE road-facing dashcam</li>
+        <li>Optional driver-facing camera</li>
+        <li>Event recording &amp; incident retrieval</li>
+        <li>Driver safety events</li>
+        <li>ECM vehicle data</li>
+        <li>IFTA mileage support</li>
+        <li>Professional installation &amp; configuration</li>
+      </ul>
+      <a href="{{ root }}contact.html" class="btn btn-primary">Build My Fleet Package</a>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/mockup-video-review.svg" alt="Fleet dashboard showing a video event review alongside HOS and GPS status">
+      <span class="pf-cap">Compliance, location and video — one screen.</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Why Combine Them</span>
+      <h2>Should Fleets Combine ELD and Dashcam?</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="solution-card"><div class="sc-icon">🔑</div><h3>One Login</h3><p>Compliance and video in the same dashboard, instead of reconciling two systems.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛠️</div><h3>One Installation</h3><p>Both installed and configured in a single visit, not two separate appointments.</p></div>
+      <div class="solution-card"><div class="sc-icon">☎️</div><h3>One Support Line</h3><p>One team to call when something needs troubleshooting.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="disclaimer-box">
+      <strong>Compliance disclaimer:</strong> ELD compliance claims apply only to certified and approved hardware/firmware configurations, installed and used as directed. Confirm current certification for your specific configuration before relying on it for regulatory compliance.
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>ELD + Dashcam Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {{ m.faq_item("Do I have to buy ELD and dashcam together?", "No &mdash; you can start with either <a href=\"" ~ root ~ "eld-canada/\">ELD</a> or <a href=\"" ~ root ~ "fleet-dashcam-canada/\">dashcams</a> alone and add the other later.") }}
+      {{ m.faq_item("Does the video sync with HOS events?", "Video events are linked to GPS location and timestamp, which lines up with the same trip data shown in HOS and DVIR records.") }}
+      {{ m.faq_item("Is this priced differently than buying ELD and dashcam separately?", "Pricing depends on fleet size and configuration &mdash; request pricing and we'll show you the combined package cost.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Ready to Connect Compliance and Video?", "Tell us your fleet size and we'll build the right ELD + Dashcam configuration.", "Build My Fleet Package", root ~ "contact.html", "Book a Free Fleet Review", root ~ "index.html#review") }}
+</section>
+
+{% endblock %}

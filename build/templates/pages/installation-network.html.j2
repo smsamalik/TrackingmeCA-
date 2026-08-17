@@ -1,0 +1,81 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / Installation Network</p>
+    <span class="hero-eyebrow">🔧 Installation Network</span>
+    <h1>Fleet GPS, ELD &amp; Dashcam Installation Across Canada</h1>
+    <p>Professional installation is part of every package — not a box we ship and leave you to figure out.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Schedule Installation</a>
+      <a href="{{ root }}become-an-installer/" class="btn btn-ghost-light">Become an Installer</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <span class="section-kicker">Coverage</span>
+    <h2>Where We Install Today</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">Installation coverage is available in Ontario, Alberta and British Columbia, and expanding into Manitoba, Saskatchewan, Quebec and Atlantic Canada. Coverage in a given city depends on current technician availability — confirm your location when you request a quote.</p>
+    <div class="coverage-map reveal">
+      <span class="cm-region cm-active">Ontario — available</span>
+      <span class="cm-region cm-active">Alberta — available</span>
+      <span class="cm-region cm-active">British Columbia — available</span>
+      <span class="cm-region cm-expanding">Manitoba — expanding</span>
+      <span class="cm-region cm-expanding">Saskatchewan — expanding</span>
+      <span class="cm-region cm-expanding">Quebec — expanding</span>
+      <span class="cm-region cm-expanding">Atlantic Canada — expanding</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Deployment</span>
+      <h2>We Don't Just Ship You a Box</h2>
+    </div>
+    <div class="journey reveal" style="grid-template-columns:repeat(4,1fr);">
+      <div class="journey-step"><h4>Fleet Review</h4><p>Understand vehicles and requirements.</p></div>
+      <div class="journey-step"><h4>Installation</h4><p>Professional installation by qualified technicians.</p></div>
+      <div class="journey-step"><h4>Configuration</h4><p>Devices, drivers, alerts and dashboards configured.</p></div>
+      <div class="journey-step"><h4>Training &amp; Support</h4><p>Drivers and fleet administrators onboarded.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Industries We Install For</span>
+      <h2>Every Kind of Commercial Vehicle</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">🚛</div><h3>Trucking Fleets</h3><p>Semis, straight trucks and reefer trailers.</p></div>
+      <div class="solution-card"><div class="sc-icon">🏗️</div><h3>Construction</h3><p>Job-site vehicles and heavy equipment.</p></div>
+      <div class="solution-card"><div class="sc-icon">📮</div><h3>Delivery &amp; Courier</h3><p>Vans and last-mile delivery vehicles.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚨</div><h3>Towing &amp; Service</h3><p>Tow trucks and field-service vehicles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>Installation Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {{ m.faq_item("Do you install at my location or a shop?", "Installation model depends on your location and fleet size &mdash; your fleet advisor will confirm whether on-site or shop installation applies when you book.") }}
+      {{ m.faq_item("How long does installation take per vehicle?", "It depends on the configuration (ELD-only vs. ELD + Vision vs. Fleet360) and vehicle type &mdash; we'll give you a specific estimate during your fleet review.") }}
+      {{ m.faq_item("What if my city isn't listed?", "Coverage is expanding &mdash; contact us and we'll confirm current availability for your area.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Ready to Get Installed?", "Tell us your fleet size and location and we'll confirm installation availability.", "Schedule Installation", root ~ "contact.html") }}
+</section>
+
+{% endblock %}

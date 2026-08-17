@@ -1,0 +1,68 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">🔒 Privacy Policy</span>
+    <h1>Privacy Policy</h1>
+    <p>How TrackingmeCA collects, uses, retains, discloses and protects personal information, including in-cab video and audio.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container legal-body">
+    <p class="legal-updated">This policy is a general-purpose placeholder intended to be reviewed and finalized by qualified legal counsel before publication. It is not legal advice.</p>
+
+    <h2>1. Overview</h2>
+    <p>TrackingmeCA ("we," "us," "our") provides fleet telematics products and services, including GPS tracking, Electronic Logging Devices (ELD), AI dashcams and driver monitoring, fuel monitoring, CAN Bus data collection, and cold-chain monitoring. This policy explains how we handle personal information in connection with those services, in line with the <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and applicable provincial private-sector privacy legislation.</p>
+
+    <h2>2. Information We Collect</h2>
+    <ul>
+      <li><strong>Vehicle &amp; telematics data:</strong> GPS location, speed, route history, engine and CAN Bus diagnostics, fuel-sensor data, and temperature/humidity sensor data.</li>
+      <li><strong>Video and, where enabled, audio:</strong> Forward, driver-facing, side and rear camera footage, and in-cab audio where a specific hardware configuration and applicable consent enable audio capture.</li>
+      <li><strong>Driver identity &amp; compliance data:</strong> Hours of Service logs, Driver Vehicle Inspection Reports, and related compliance records.</li>
+      <li><strong>Contact &amp; account information:</strong> Names, company details, phone numbers, email addresses and billing information submitted through our forms or by phone.</li>
+    </ul>
+
+    <h2 id="video-consent">3. In-Cab Video &amp; Audio: Notice and Consent</h2>
+    <p>Cameras and, where enabled, microphones installed in a vehicle cab capture personal information about the driver and may incidentally capture third parties (e.g., passengers, other road users). Depending on the jurisdiction and workplace context, this collection may require:</p>
+    <ul>
+      <li>Clear advance notice to drivers describing what is recorded, why, and how the data is used;</li>
+      <li>Driver consent, where required by applicable law or a collective agreement;</li>
+      <li>A documented business purpose (e.g., safety, coaching, incident investigation, insurance and claims support);</li>
+      <li>Limits on access to footage, tied to that business purpose.</li>
+    </ul>
+    <p><strong>Fleet operators (our customers) are responsible for providing legally sufficient notice and obtaining any required consent from their own drivers and personnel before activating in-cab recording</strong>, including compliance with workplace privacy obligations, applicable collective agreements, and any provincial requirements that go beyond PIPEDA (for example, in provinces with substantially similar private-sector privacy legislation, or public-sector/labour-relations rules that may apply to municipal or unionized fleets). TrackingmeCA provides configuration tools and guidance to support this, but does not act as a legal advisor to customers.</p>
+
+    <h2>4. How We Use Information</h2>
+    <ul>
+      <li>Providing and operating the telematics platform, including live tracking, alerts and reporting;</li>
+      <li>Supporting Hours of Service and other regulatory compliance obligations;</li>
+      <li>Investigating safety incidents, collisions, insurance claims and driver coaching;</li>
+      <li>Improving product performance, reliability and support;</li>
+      <li>Billing, account management and customer support.</li>
+    </ul>
+
+    <h2>5. Retention</h2>
+    <p>Video, telematics and compliance data are retained according to the retention settings configured for each fleet account, applicable regulatory requirements (e.g., HOS record retention), and our own operational and legal requirements. Fleet administrators can configure certain retention and access settings within the platform; contact your account administrator or TrackingmeCA support for details specific to your account.</p>
+
+    <h2>6. Access &amp; Disclosure</h2>
+    <p>Access to video and telematics data is limited to authorized users within a customer's account (e.g., fleet managers, dispatchers) and TrackingmeCA personnel who require access to provide support or maintain the platform. We may disclose information where required by law, to investigate a safety incident, to support an insurance claim with proper authorization, or with the account holder's direction.</p>
+
+    <h2>7. Security</h2>
+    <p>We use industry-standard technical and organizational safeguards, including encryption in transit, access controls, and monitoring, appropriate to the sensitivity of the data involved. No system is completely secure, and we encourage customers to configure access permissions and retention settings appropriate to their organization's risk profile.</p>
+
+    <h2>8. PIPEDA &amp; Provincial Privacy Law</h2>
+    <p>PIPEDA applies to the collection, use and disclosure of personal information in the course of commercial activity in Canada. Some provinces (including Alberta, British Columbia and Quebec) have their own private-sector privacy legislation that may apply instead of, or in addition to, PIPEDA. Fleets operating in multiple provinces, or in unionized/public-sector environments, should confirm their specific obligations with qualified counsel.</p>
+
+    <h2>9. Insurance Discounts</h2>
+    <p>TrackingmeCA does not promise or guarantee insurance premium discounts. Any discount related to telematics data is determined solely by the customer's insurance provider and is not guaranteed by TrackingmeCA unless confirmed in writing by a specific insurance partner.</p>
+
+    <h2>10. Contact Us</h2>
+    <p>Questions about this policy or a specific privacy concern can be directed to <a href="mailto:info@trackingme.ca">info@trackingme.ca</a> or via our <a href="{{ root }}contact.html">Contact page</a>.</p>
+  </div>
+</section>
+
+{% endblock %}

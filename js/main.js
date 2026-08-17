@@ -118,6 +118,50 @@
     }, 4000);
   }
 
+  function captureUtm() {
+    var params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_term: params.get("utm_term") || "",
+    };
+  }
+
+  function submitLead(form) {
+    var endpoint = window.LEAD_ENDPOINT;
+    var data = {};
+    new FormData(form).forEach(function (value, key) {
+      if (key === "_gotcha") return;
+      if (data[key] !== undefined) {
+        data[key] = Array.isArray(data[key]) ? data[key].concat(value) : [data[key], value];
+      } else {
+        data[key] = value;
+      }
+    });
+    data.form = form.getAttribute("data-lead-form") || "unknown";
+    data.landing_page = window.location.pathname;
+    data.timestamp = new Date().toISOString();
+    Object.assign(data, captureUtm());
+
+    if (!endpoint || endpoint.indexOf("REPLACE_WITH") === 0) {
+      // Apps Script Web App URL not configured yet (see js/lead-config.js) —
+      // log instead of silently discarding the submission.
+      console.warn("Lead capture endpoint not configured — submission not sent:", data);
+      return Promise.resolve();
+    }
+
+    // Apps Script Web Apps don't return CORS headers to cross-origin reads,
+    // so the response body can't be inspected here — mode:'no-cors' still
+    // delivers the request, we just treat "no network error" as success.
+    return fetch(endpoint, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+      body: JSON.stringify(data),
+    });
+  }
+
   function initForms() {
     document.querySelectorAll("form[data-lead-form]").forEach(function (form) {
       form.addEventListener("submit", function (e) {
@@ -126,13 +170,18 @@
           form.reportValidity();
           return;
         }
-        var successEl = form.parentElement.querySelector(".form-success");
-        form.style.display = "none";
-        if (successEl) successEl.classList.add("is-visible");
-        successEl && successEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        // NOTE: This is a front-end placeholder. Wire this submit handler to
-        // your CRM/lead-routing endpoint (e.g. HubSpot, Salesforce, or a
-        // serverless form handler) before go-live.
+        var honeypot = form.querySelector('[name="_gotcha"]');
+        if (honeypot && honeypot.value) return; // bot — drop silently, no UX change
+
+        var submitBtn = form.querySelector('[type="submit"]');
+        if (submitBtn) submitBtn.disabled = true;
+
+        submitLead(form).finally(function () {
+          var successEl = form.parentElement.querySelector(".form-success");
+          form.style.display = "none";
+          if (successEl) successEl.classList.add("is-visible");
+          successEl && successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
       });
     });
   }

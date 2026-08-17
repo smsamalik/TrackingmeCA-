@@ -1,0 +1,245 @@
+{
+  "phone_display": "(416) 779-7382",
+  "phone_href": "tel:+14167797382",
+  "email": "info@trackingme.ca",
+  "social": {
+    "facebook": "https://www.facebook.com/TrackingCanada",
+    "x": "https://x.com/trackingcanada",
+    "instagram": "https://www.instagram.com/trackingcanada/"
+  },
+  "nav_primary": [
+    {
+      "label": "Solutions",
+      "mega": "solutions"
+    },
+    {
+      "label": "Industries",
+      "href": "/industries/"
+    },
+    {
+      "label": "Installation",
+      "href": "/installation-network/"
+    },
+    {
+      "label": "Resources",
+      "href": "/resources.html"
+    },
+    {
+      "label": "Partners",
+      "href": "/partners.html"
+    },
+    {
+      "label": "Company",
+      "href": "/about.html"
+    }
+  ],
+  "mega_menus": {
+    "solutions": {
+      "groups": [
+        {
+          "heading": "Fleet Management",
+          "links": [
+            {
+              "title": "ELD Compliance",
+              "desc": "HOS, driver logs & DVIR",
+              "href": "/eld-canada/",
+              "icon": "\ud83d\udccb"
+            },
+            {
+              "title": "ELD + Dashcam",
+              "desc": "Compliance and video, connected",
+              "href": "/eld-dashcam-canada/",
+              "icon": "\ud83d\udee1\ufe0f"
+            },
+            {
+              "title": "GPS Fleet Tracking",
+              "desc": "Real-time location & geofencing",
+              "href": "/gps-fleet-tracking-canada/",
+              "icon": "\ud83d\udccd"
+            },
+            {
+              "title": "IFTA & Fleet Reporting",
+              "desc": "Mileage support from vehicle data",
+              "href": "/eld-canada/#ifta",
+              "icon": "\ud83e\uddfe"
+            }
+          ]
+        },
+        {
+          "heading": "Video & Diagnostics",
+          "links": [
+            {
+              "title": "AI Dashcams",
+              "desc": "Video telematics & safety",
+              "href": "/fleet-dashcam-canada/",
+              "icon": "\ud83c\udfa5"
+            },
+            {
+              "title": "Driver Monitoring",
+              "desc": "Fatigue & distraction detection",
+              "href": "/solutions/driver-monitoring.html",
+              "icon": "\ud83e\uddd1\u200d\u2708\ufe0f"
+            },
+            {
+              "title": "ECM / Vehicle Diagnostics",
+              "desc": "Engine data & fault codes",
+              "href": "/solutions/can-bus.html",
+              "icon": "\ud83d\udd27"
+            }
+          ]
+        },
+        {
+          "heading": "Asset & Cargo",
+          "links": [
+            {
+              "title": "Asset Tracking",
+              "desc": "Trailers & equipment",
+              "href": "/solutions/can-bus.html#assets",
+              "icon": "\ud83d\udce6"
+            },
+            {
+              "title": "Fuel Monitoring",
+              "desc": "Theft detection & efficiency",
+              "href": "/solutions/fuel-monitoring.html",
+              "icon": "\u26fd"
+            },
+            {
+              "title": "Cold Chain Monitoring",
+              "desc": "Temperature & humidity compliance",
+              "href": "/solutions/cold-chain.html",
+              "icon": "\ud83c\udf21\ufe0f"
+            },
+            {
+              "title": "Integrations",
+              "desc": "Platforms & business systems",
+              "href": "/integrations/",
+              "icon": "\ud83d\udd17"
+            }
+          ]
+        }
+      ],
+      "viewall": {
+        "label": "Build my fleet package \u2192",
+        "href": "/eld-dashcam-canada/"
+      }
+    }
+  },
+  "footer_columns": [
+    {
+      "heading": "Solutions",
+      "links": [
+        {
+          "label": "ELD Compliance",
+          "href": "/eld-canada/"
+        },
+        {
+          "label": "ELD + Dashcam",
+          "href": "/eld-dashcam-canada/"
+        },
+        {
+          "label": "AI Dashcams",
+          "href": "/fleet-dashcam-canada/"
+        },
+        {
+          "label": "GPS Fleet Tracking",
+          "href": "/gps-fleet-tracking-canada/"
+        },
+        {
+          "label": "Driver Monitoring",
+          "href": "/solutions/driver-monitoring.html"
+        },
+        {
+          "label": "CAN Bus & Vehicle Data",
+          "href": "/solutions/can-bus.html"
+        },
+        {
+          "label": "Fuel Monitoring",
+          "href": "/solutions/fuel-monitoring.html"
+        },
+        {
+          "label": "Cold-Chain Monitoring",
+          "href": "/solutions/cold-chain.html"
+        }
+      ]
+    },
+    {
+      "heading": "Industries",
+      "links": [
+        {
+          "label": "Trucking",
+          "href": "/industries/trucking/"
+        },
+        {
+          "label": "Logistics",
+          "href": "/industries/logistics/"
+        },
+        {
+          "label": "Construction",
+          "href": "/industries/construction/"
+        },
+        {
+          "label": "Courier & Delivery",
+          "href": "/industries/courier-delivery/"
+        },
+        {
+          "label": "Towing",
+          "href": "/industries/towing/"
+        },
+        {
+          "label": "Field Service",
+          "href": "/industries/field-service/"
+        },
+        {
+          "label": "Cold Chain",
+          "href": "/industries/cold-chain/"
+        }
+      ]
+    },
+    {
+      "heading": "Company",
+      "links": [
+        {
+          "label": "About Us",
+          "href": "/about.html"
+        },
+        {
+          "label": "Installation Network",
+          "href": "/installation-network/"
+        },
+        {
+          "label": "Become an Installer",
+          "href": "/become-an-installer/"
+        },
+        {
+          "label": "Partner With Us",
+          "href": "/partners.html"
+        },
+        {
+          "label": "Careers",
+          "href": "/careers/"
+        },
+        {
+          "label": "Resources",
+          "href": "/resources.html"
+        },
+        {
+          "label": "Contact",
+          "href": "/contact.html"
+        }
+      ]
+    },
+    {
+      "heading": "Legal",
+      "links": [
+        {
+          "label": "Privacy Policy",
+          "href": "/privacy-policy.html"
+        },
+        {
+          "label": "Terms of Service",
+          "href": "/terms.html"
+        }
+      ]
+    }
+  ]
+}

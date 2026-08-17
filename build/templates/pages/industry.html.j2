@@ -1,0 +1,70 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / <a href="{{ root }}industries/" style="color:#cfe0f2;">Industries</a> / {{ industry_name }}</p>
+    <span class="hero-eyebrow">{{ eyebrow }}</span>
+    <h1>{{ h1 }}</h1>
+    <p>{{ sub }}</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Get Fleet Pricing</a>
+      <a href="{{ root }}index.html#review" class="btn btn-ghost-light">Book a Free Fleet Review</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Built For {{ industry_name }}</span>
+      <h2>{{ capabilities_heading }}</h2>
+      <ul class="feature-list">
+        {% for cap in capabilities %}<li>{{ cap }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/{{ infographic }}" alt="{{ infographic_alt }}">
+      <span class="pf-cap">{{ infographic_caption }}</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Why It Matters</span>
+      <h2>{{ why_heading }}</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      {% for card in why_cards %}
+      <div class="solution-card"><div class="sc-icon">{{ card.icon }}</div><h3>{{ card.title }}</h3><p>{{ card.desc }}</p></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% if disclaimer %}
+<section>
+  <div class="container">
+    <div class="disclaimer-box">{{ disclaimer | safe }}</div>
+  </div>
+</section>
+{% endif %}
+
+<section id="faq" class="{{ 'section-alt' if not disclaimer else '' }}">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>{{ industry_name }} Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {% for q, a in faqs %}{{ m.faq_item(q, a) }}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band(cta_heading, cta_sub, "Get Fleet Pricing", root ~ "contact.html", "Book a Free Fleet Review", root ~ "index.html#review") }}
+</section>
+
+{% endblock %}
