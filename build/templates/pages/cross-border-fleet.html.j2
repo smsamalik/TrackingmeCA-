@@ -1,0 +1,56 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / Cross-Border Fleet</p>
+    <span class="hero-eyebrow">🛂 Cross-Border Fleet Technology</span>
+    <h1>Fleet Technology for Canada–U.S. Operations</h1>
+    <p>Fleets running between Canada and the U.S. deal with two sets of rules, two sets of expectations, and one truck. Here's what to confirm before you rely on any system operationally.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Discuss Cross-Border Fleet Requirements</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">What's Different</span>
+      <h2>What Cross-Border Fleets Need to Think About</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="solution-card"><div class="sc-icon">📋</div><h3>Different HOS Requirements</h3><p>Canadian and U.S. Hours of Service rules aren't identical &mdash; confirm how your ELD configuration handles both jurisdictions.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛂</div><h3>Border Operations</h3><p>Border crossings add wait time and documentation steps that affect route and HOS planning.</p></div>
+      <div class="solution-card"><div class="sc-icon">📍</div><h3>Vehicle Visibility</h3><p>GPS coverage should hold up on both sides of the border, not just domestically.</p></div>
+      <div class="solution-card"><div class="sc-icon">📝</div><h3>Driver Logs</h3><p>Electronic logs need to reflect the correct ruleset for wherever the driver currently is.</p></div>
+      <div class="solution-card"><div class="sc-icon">🧾</div><h3>IFTA</h3><p>Cross-border mileage still needs to be tracked accurately for fuel-tax reporting.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎥</div><h3>Incident Evidence</h3><p>Video evidence matters regardless of which side of the border an incident happens on.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="disclaimer-box">
+      <strong>Confirm before you rely on this operationally:</strong> Cross-border HOS and ELD requirements can differ by jurisdiction and change over time. This page describes general considerations, not a guarantee of specific regulatory functionality. Confirm current cross-border requirements for your specific configuration with a qualified compliance advisor and the applicable regulator before relying on any system for cross-border compliance.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container text-center">
+    <span class="section-kicker">Where to Start</span>
+    <h2>Talk Through Your Specific Routes</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">Every cross-border operation is different &mdash; tell us your routes and current setup, and we'll tell you honestly what to confirm before switching or adding anything.</p>
+    <a href="{{ root }}contact.html" class="btn btn-outline">Discuss Cross-Border Fleet Requirements</a>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Running Routes Across the Border?", "Tell us about your cross-border operation and we'll help you figure out what you actually need.", "Discuss Cross-Border Fleet Requirements", root ~ "contact.html") }}
+</section>
+
+{% endblock %}

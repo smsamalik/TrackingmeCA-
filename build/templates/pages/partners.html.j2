@@ -1,0 +1,136 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">🤝 Partner Program</span>
+    <h1>Grow With TrackingmeCA</h1>
+    <p>Recurring revenue, competitive partner pricing and full sales, technical and marketing support — for truck-repair centres, dealerships, fleet consultants, insurance professionals, dispatch companies, safety consultants, driving schools and technology resellers across Canada.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="#reseller" class="btn btn-primary">Become a Fleet Technology Partner</a>
+      <a href="#affiliate" class="btn btn-ghost-light">Join Our Affiliate Program</a>
+      <a href="{{ root }}become-an-installer/" class="btn btn-ghost-light">Apply as an Installer</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Who We Partner With</span>
+      <h2>Built for Every Kind of Channel Partner</h2>
+    </div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">🔧</div><h3>Truck-Repair Centres</h3><p>Add recurring revenue to existing service relationships.</p></div>
+      <div class="solution-card"><div class="sc-icon">🚚</div><h3>Dealerships</h3><p>Offer connected fleet technology at time of sale.</p></div>
+      <div class="solution-card"><div class="sc-icon">📊</div><h3>Fleet Consultants</h3><p>Recommend a platform backed by responsive local support.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛡️</div><h3>Insurance Professionals</h3><p>Offer clients tools that support safer fleet operations.</p></div>
+      <div class="solution-card"><div class="sc-icon">📡</div><h3>Dispatch Companies</h3><p>Bundle visibility tools with your dispatch services.</p></div>
+      <div class="solution-card"><div class="sc-icon">🦺</div><h3>Safety Consultants</h3><p>Recommend video and compliance tools clients can act on.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎓</div><h3>Driving Schools</h3><p>Introduce fleet technology to your commercial students.</p></div>
+      <div class="solution-card"><div class="sc-icon">💻</div><h3>Technology Resellers</h3><p>Add fleet telematics to your existing portfolio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal"><span class="section-kicker">Program Benefits</span><h2>What Partners Get</h2></div>
+    <div class="grid grid-4 reveal">
+      <div class="solution-card"><div class="sc-icon">💰</div><h3>Recurring Revenue</h3><p>Earn on every active subscription you bring on board.</p></div>
+      <div class="solution-card"><div class="sc-icon">🏷️</div><h3>Competitive Partner Pricing</h3><p>Preferred pricing tiers for partners in good standing.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎓</div><h3>Sales &amp; Technical Training</h3><p>Onboarding and ongoing training on the full product line.</p></div>
+      <div class="solution-card"><div class="sc-icon">📣</div><h3>Marketing Materials</h3><p>Co-branded assets to support your local sales efforts.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔗</div><h3>Lead-Sharing Opportunities</h3><p>Inbound leads shared with partners where a fit exists.</p></div>
+      <div class="solution-card"><div class="sc-icon">🤝</div><h3>Installation Collaboration</h3><p>Work alongside our installation network on shared customers.</p></div>
+      <div class="solution-card"><div class="sc-icon">💻</div><h3>Platform Onboarding</h3><p>Guided setup for you and your customers.</p></div>
+      <div class="solution-card"><div class="sc-icon">📈</div><h3>Canada-Wide Growth Potential</h3><p>Grow alongside a fast-expanding national platform.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="reseller">
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Referral &amp; Reseller Program</span>
+      <h2>Refer Fleets or Sell the Full Solution</h2>
+      <p class="section-lead">Refer fleets and earn on qualified leads that convert, or sell the full TrackingmeCA solution set under your own customer relationships with partner pricing behind you.</p>
+    </div>
+    <div class="text-center"><a href="#apply" class="btn btn-primary">Become a Fleet Technology Partner</a></div>
+  </div>
+</section>
+
+<section class="section-alt" id="affiliate">
+  <div class="container split reverse">
+    <div>
+      <span class="section-kicker">Affiliate Program</span>
+      <h2>Join Our Affiliate Program</h2>
+      <p class="section-lead">Ideal for consultants, brokers and industry professionals who don't want to manage installations directly — refer a fleet and we handle the rest.</p>
+    </div>
+    <div class="text-center"><a href="#apply" class="btn btn-primary">Apply to Our Affiliate Program</a></div>
+  </div>
+</section>
+
+<section id="installer">
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Installer Program</span>
+      <h2>Apply as an Installation Partner</h2>
+      <p class="section-lead">Join our Canada-wide installer network for professional in-shop and on-site installation work, backed by training and technical documentation.</p>
+    </div>
+    <div class="text-center"><a href="{{ root }}become-an-installer/" class="btn btn-primary">Apply as an Installer</a></div>
+  </div>
+</section>
+
+<section class="section-alt" id="apply">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Partner Application</span>
+      <h2>Tell Us About Your Business</h2>
+      <p class="section-lead">Complete the form below and our partnerships team will follow up to discuss the right program for you.</p>
+    </div>
+    <div class="form-card reveal" style="max-width:800px;margin:0 auto;">
+      <form data-lead-form="partner-application" novalidate>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+        <div class="form-grid">
+          <div class="form-field"><label for="pp-company">Company Name</label><input id="pp-company" name="company" type="text" required></div>
+          <div class="form-field"><label for="pp-contact">Contact Person</label><input id="pp-contact" name="contact" type="text" required></div>
+          <div class="form-field"><label for="pp-province">Province</label>
+            <select id="pp-province" name="province" required>
+              <option value="">Select…</option>
+              <option>Ontario</option><option>British Columbia</option><option>Alberta</option><option>Quebec</option><option>Manitoba</option><option>Saskatchewan</option><option>Atlantic Canada</option><option>Territories</option>
+            </select>
+          </div>
+          <div class="form-field"><label for="pp-city">City</label><input id="pp-city" name="city" type="text" required></div>
+          <div class="form-field"><label for="pp-website">Website <span class="opt">(optional)</span></label><input id="pp-website" name="website" type="url"></div>
+          <div class="form-field"><label for="pp-type">Business Type</label>
+            <select id="pp-type" name="business_type" required>
+              <option value="">Select…</option>
+              <option>Truck-Repair Centre</option><option>Dealership</option><option>Fleet Consultant</option><option>Insurance Professional</option>
+              <option>Dispatch Company</option><option>Safety Consultant</option><option>Driving School</option><option>Technology Reseller</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-field"><label for="pp-years">Years in Business</label><input id="pp-years" name="years_in_business" type="number" min="0"></div>
+          <div class="form-field"><label for="pp-coverage">Service Coverage Area</label><input id="pp-coverage" name="coverage" type="text" placeholder="e.g., GTA, Lower Mainland, Alberta-wide"></div>
+          <div class="form-field"><label for="pp-staff">Technicians / Salespeople</label><input id="pp-staff" name="staff_count" type="number" min="0"></div>
+          <div class="form-field full"><label for="pp-experience">Relevant Experience</label><textarea id="pp-experience" name="experience" rows="2"></textarea></div>
+          <div class="form-field full"><label for="pp-message">Message</label><textarea id="pp-message" name="message" rows="3"></textarea></div>
+        </div>
+        <label class="consent-row">
+          <input type="checkbox" required>
+          <span>I consent to TrackingmeCA contacting me about partnership opportunities as described in the <a href="{{ root }}privacy-policy.html">Privacy Policy</a>.</span>
+        </label>
+        <button type="submit" class="btn btn-primary btn-block">Submit Partner Application</button>
+      </form>
+      <div class="form-success">
+        <div class="fs-icon">✓</div>
+        <h3>Thank you for applying.</h3>
+        <p>Our partnerships team will review your application and follow up shortly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

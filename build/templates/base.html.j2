@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="https://www.trackingme.ca{{ canonical }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ og_title | default(title) }}">
+<meta property="og:description" content="{{ og_description | default(description) }}">
+<meta property="og:url" content="https://www.trackingme.ca{{ canonical }}">
+<meta property="og:image" content="https://www.trackingme.ca/assets/logo-full-color.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title | default(title) }}">
+<meta name="twitter:description" content="{{ og_description | default(description) }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ root }}assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ root }}assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ root }}assets/apple-touch-icon.png">
+<link rel="stylesheet" href="{{ root }}css/style.css">
+{% for block in schema_blocks %}
+<script type="application/ld+json">
+{{ block }}
+</script>
+{% endfor %}
+{% block extra_head %}{% endblock %}
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="topbar"><div class="container"><div class="topbar-left"><span>🇨🇦 Proudly Canadian — ELD, GPS &amp; video for Canadian fleets</span><span>Mon–Fri, 7am–8pm ET</span></div><div class="topbar-right"><a href="{{ root }}contact.html">Get Support</a></div></div></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="{{ root }}index.html" class="logo" aria-label="TrackingmeCA home">
+      <img src="{{ root }}assets/logo-full-color.png" alt="TrackingmeCA" class="logo-img">
+      <span class="logo-tag">Fleet Technology</span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        {% for item in site.nav_primary %}
+          {% if item.mega %}
+          {% set menu = site.mega_menus[item.mega] %}
+          <li class="has-dropdown">
+            <button class="nav-top-link" aria-expanded="false">{{ item.label }} ▾</button>
+            <div class="dropdown-panel mega">
+              {% for group in menu.groups %}
+              <div class="mega-col">
+                <h4 class="mega-heading">{{ group.heading }}</h4>
+                {% for it in group.links %}
+                <a href="{{ rootlink(it.href) }}"><span class="dd-icon">{{ it.icon }}</span><span><span class="dd-title">{{ it.title }}</span><span class="dd-desc">{{ it.desc }}</span></span></a>
+                {% endfor %}
+              </div>
+              {% endfor %}
+              <a class="dd-viewall" href="{{ rootlink(menu.viewall.href) }}">{{ menu.viewall.label }}</a>
+            </div>
+          </li>
+          {% else %}
+          <li><a href="{{ rootlink(item.href) }}">{{ item.label }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="phone-link" href="{{ site.phone_href }}">📞 {{ site.phone_display }}</a>
+      <a class="btn btn-primary btn-sm" href="{{ root }}contact.html">Get Fleet Pricing</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="nav-scrim" id="navScrim"></div>
+
+<main id="main">
+{% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a href="{{ root }}index.html" class="logo" style="margin-bottom:14px;">
+          <img src="{{ root }}assets/logo-white.png" alt="TrackingmeCA" class="footer-logo-img">
+        </a>
+        <p>ELD, GPS &amp; AI dashcams for Canadian fleets — supplied, installed, configured and supported in Canada.</p>
+        <div class="footer-social" aria-label="Social links">
+          <a href="{{ site.social.facebook }}" aria-label="Facebook" target="_blank" rel="noopener noreferrer">f</a>
+          <a href="{{ site.social.x }}" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">X</a>
+          <a href="{{ site.social.instagram }}" aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+        </div>
+      </div>
+      {% for col in site.footer_columns %}
+      <div><h4>{{ col.heading }}</h4><ul>
+        {% for link in col.links %}<li><a href="{{ rootlink(link.href) }}">{{ link.label }}</a></li>{% endfor %}
+      </ul></div>
+      {% endfor %}
+    </div>
+    <div class="footer-bottom"><span>© <span data-year></span> Trackingme Ltd. All rights reserved.</span><span class="footer-lang">EN | FR — coming soon</span></div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar" aria-label="Quick actions">
+  <a href="{{ site.phone_href }}"><span class="mcb-ic">📞</span>Call</a>
+  <a href="{{ root }}contact.html"><span class="mcb-ic">💲</span>Pricing</a>
+  <a href="{{ root }}index.html#review"><span class="mcb-ic">🗓️</span>Demo</a>
+</div>
+
+<script src="{{ root }}js/lead-config.js"></script>
+<script src="{{ root }}js/main.js"></script>
+{% block extra_scripts %}{% endblock %}
+</body>
+</html>

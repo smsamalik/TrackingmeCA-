@@ -1,0 +1,124 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / Fleet Dashcams</p>
+    <span class="hero-eyebrow">🎥 Fleet Dashcams Canada</span>
+    <h1>AI Dashcams &amp; Video Telematics for Canadian Fleets</h1>
+    <p>Multi-camera video telematics — live streaming, automatic event capture, driver coaching, and GPS-linked video evidence for accidents, claims and insurance investigations.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Request Fleet Package</a>
+      <a href="#bc" class="btn btn-ghost-light">B.C. Fleets: Read This</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Core Capabilities</span>
+      <h2>Multi-Angle Video, Linked to Location</h2>
+      <ul class="feature-list">
+        <li>Live video streaming and remote video retrieval on demand</li>
+        <li>Forward-facing, driver-facing, side and rear camera options</li>
+        <li>Cloud and local (SD/onboard) video storage options</li>
+        <li>Automatic event recording, collision and harsh-driving detection</li>
+        <li>GPS location linked with every video clip</li>
+        <li>AI-assisted driver coaching and safety scoring</li>
+        <li>Evidence for accidents, claims and insurance investigations</li>
+        <li>4G LTE connectivity for near-real-time upload</li>
+      </ul>
+      <p class="compare-note">Hardware ranges from single-channel 4G dashcams to full MDVR (Mobile Digital Video Recorder) systems with G-sensor impact detection and night vision, for fleets that need multi-camera coverage on heavier vehicles.</p>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/dashcam-coverage.svg" alt="Diagram showing forward, driver-facing, side and rear dashcam camera coverage">
+      <span class="pf-cap">Forward, driver-facing, side and rear camera coverage in one system.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">What Happens When Something Happens</span>
+      <h2>From Event to Evidence</h2>
+    </div>
+    <div class="topology reveal">
+      <div class="topology-flow">
+        <span class="tf-node">Camera Detects Event</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Video Uploaded</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Fleet Manager Alerted</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Incident Reviewed</span><span class="tf-arrow">→</span>
+        <span class="tf-node tf-node--end">Driver Coached / Evidence Retained</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bc">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">British Columbia Fleets</span>
+      <h2>B.C. Commercial Dashcam Readiness</h2>
+      <p class="section-lead">B.C. has passed legislation requiring dashcams on heavy commercial vehicles. Here's what's confirmed so far, and how TrackingmeCA can help you prepare.</p>
+    </div>
+    <div class="grid grid-2 reveal">
+      <div class="solution-card">
+        <div class="sc-icon">🍁</div>
+        <h3>What's Confirmed</h3>
+        <ul class="mini-list">
+          <li>B.C.'s Bill M217, the <em>Dashboard Cameras in Commercial Vehicles Act</em>, passed third reading in the B.C. Legislature on May 25, 2026, with all-party support.</li>
+          <li>As reported, it applies to commercial vehicles with a GVWR or registered gross weight exceeding 11,793 kg (approx. 26,000 lb) — generally semis and heavy straight trucks.</li>
+          <li>The reported requirement is for a forward-facing camera only — driver-facing/in-cab cameras are not mandated by this specific bill.</li>
+          <li>It is expected to take effect approximately six months after royal assent, which would place compliance in late 2026 or early 2027 based on public reporting available at the time of writing.</li>
+        </ul>
+      </div>
+      <div class="solution-card">
+        <div class="sc-icon">⚠️</div>
+        <h3>Still To Be Finalized</h3>
+        <ul class="mini-list">
+          <li>Exact royal assent date and final in-force compliance deadline</li>
+          <li>Final published regulations covering technical specifications (e.g., resolution, night vision, retention period)</li>
+          <li>Enforcement mechanisms and penalties</li>
+          <li>Any exemptions by vehicle class or operation type</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer-box reveal">
+      <strong>Legal disclaimer:</strong> This information reflects publicly reported details about British Columbia's dashcam legislation for heavy commercial vehicles as of the time of writing and is provided for general awareness only — it is not legal advice. Final hardware configuration, technical specifications and compliance deadlines depend on the applicable vehicle type, operation, and the finalized provincial regulations. Confirm current requirements directly with the Government of British Columbia or a qualified legal/compliance advisor before making purchasing or compliance decisions.
+    </div>
+    <div class="text-center" style="margin-top:20px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Talk to Us About B.C. Compliance Readiness</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container text-center">
+    <span class="section-kicker">Better Together</span>
+    <h2>Pair Dashcams With ELD for One Connected System</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">Video, compliance and location in one dashboard instead of two separate logins.</p>
+    <a href="{{ root }}eld-dashcam-canada/" class="btn btn-outline">See ELD + Dashcam</a>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>Fleet Dashcam Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {{ m.faq_item("Do dashcams increase insurance savings?", "Video evidence can help speed up claims and disputes, but we don't make guaranteed insurance-savings claims &mdash; ask your insurer how dashcam footage affects your specific policy.") }}
+      {{ m.faq_item("Can I retrieve video after an incident?", "Yes &mdash; depending on configuration, video can be retrieved remotely on demand or pulled from onboard storage.") }}
+      {{ m.faq_item("Is a driver-facing camera required?", "No &mdash; driver-facing cameras are optional on most configurations. B.C.'s current dashcam bill, as reported, only requires a forward-facing camera.") }}
+      {{ m.faq_item("Does this work with our existing ELD?", "In many cases, yes &mdash; ask a fleet advisor to review your current ELD before you commit to a standalone dashcam system.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("See Every Trip. Protect Every Driver.", "Request pricing for your fleet, or book a free fleet review first if you're not sure what you need.", "Request Fleet Package", root ~ "contact.html", "Book a Free Fleet Review", root ~ "index.html#review") }}
+</section>
+
+{% endblock %}

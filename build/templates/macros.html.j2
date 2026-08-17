@@ -1,0 +1,26 @@
+{% macro trust_bar() %}
+<section class="trust-bar">
+  <div class="container trust-grid">
+    <div class="trust-item"><span class="ti-icon">🇨🇦</span> Canadian Support</div>
+    <div class="trust-item"><span class="ti-icon">🔧</span> Professional Installation</div>
+    <div class="trust-item"><span class="ti-icon">🚚</span> Fleet-Ready</div>
+    <div class="trust-item"><span class="ti-icon">🛂</span> Canada + U.S. Operations</div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro cta_band(heading, sub, primary_label, primary_href, secondary_label=None, secondary_href=None, note=None) %}
+<div class="container cta-band" style="background:transparent;padding:0;">
+  <h2>{{ heading }}</h2>
+  <p>{{ sub }}</p>
+  <div class="hero-ctas" style="justify-content:center;margin-top:22px;">
+    <a href="{{ primary_href }}" class="btn btn-secondary">{{ primary_label }}</a>
+    {% if secondary_label %}<a href="{{ secondary_href }}" class="btn btn-ghost-light">{{ secondary_label }}</a>{% endif %}
+  </div>
+  {% if note %}<p class="cta-note">{{ note }}</p>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro faq_item(question, answer) %}
+<div class="faq-item"><button class="faq-q">{{ question }} <span class="faq-plus">+</span></button><div class="faq-a"><div class="faq-a-inner">{{ answer }}</div></div></div>
+{% endmacro %}

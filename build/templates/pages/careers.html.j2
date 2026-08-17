@@ -1,0 +1,41 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / Careers</p>
+    <span class="hero-eyebrow">🍁 Careers</span>
+    <h1>Help Build Canada's Connected Fleet Ecosystem</h1>
+    <p>We're growing across Ontario, Alberta and British Columbia, with an installer network and partner program expanding alongside us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Where We're Growing</span>
+      <h2>Future Team Areas</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="solution-card"><div class="sc-icon">📞</div><h3>Sales</h3><p>Helping Canadian fleets find the right configuration.</p></div>
+      <div class="solution-card"><div class="sc-icon">🛠️</div><h3>Technical Support</h3><p>Supporting fleets after installation.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔧</div><h3>Fleet Technology Installation</h3><p>Hands-on deployment work across our coverage area.</p></div>
+      <div class="solution-card"><div class="sc-icon">🤝</div><h3>Customer Success</h3><p>Keeping fleets configured and supported long-term.</p></div>
+      <div class="solution-card"><div class="sc-icon">📦</div><h3>Operations</h3><p>Keeping hardware, logistics and installs running smoothly.</p></div>
+      <div class="solution-card"><div class="sc-icon">💻</div><h3>Software &amp; Data</h3><p>Building the platform fleets rely on every day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container text-center">
+    <span class="section-kicker">Current Openings</span>
+    <h2>No Open Positions Right Now</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">We don't have active openings to post today. If that changes, they'll appear on this page &mdash; in the meantime, feel free to reach out if you think you'd be a fit for where we're headed.</p>
+    <a href="{{ root }}contact.html" class="btn btn-outline">Get in Touch</a>
+  </div>
+</section>
+
+{% endblock %}

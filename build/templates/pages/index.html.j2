@@ -1,0 +1,441 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<!-- 01. HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow">🍁 Fleet Technology Without Enterprise Complexity</span>
+      <h1>ELD, GPS &amp; AI Dashcams for Canadian Fleets</h1>
+      <p class="hero-sub">One connected fleet solution for compliance, safety and visibility — professionally installed and supported in Canada. We supply it, install it, configure it, and support it.</p>
+      <div class="hero-ctas">
+        <a href="{{ root }}contact.html" class="btn btn-primary">Get Fleet Pricing</a>
+        <a href="{{ root }}index.html#review" class="btn btn-ghost-light">Book a Free Fleet Review</a>
+      </div>
+      <p class="hero-tertiary"><a href="#ecosystem">See how it works →</a></p>
+    </div>
+    <div class="hero-visual">
+      <div class="photo-frame" style="--ar:9/7">
+        <img class="pf-graphic" src="{{ root }}assets/infographics/connected-truck-hero.svg" alt="A Canadian semi-truck connected to ELD, ECM, GPS, AI camera, driver app and cloud modules, with data flowing into one fleet dashboard">
+        <span class="pf-cap">One truck. Seven data sources. One dashboard.</span>
+      </div>
+      <div class="hero-badge-float"><span class="pulse-dot"></span> Live fleet data streaming</div>
+    </div>
+  </div>
+</section>
+
+{{ m.trust_bar() }}
+
+<!-- 03. FLEET PAIN -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">The Problem</span>
+      <h2>Too Many Fleet Systems?</h2>
+      <p class="section-lead">A separate ELD provider. A separate GPS provider. A separate dashcam vendor. A SIM plan from someone else. An installer you have to schedule yourself. Support tickets split three ways. None of that tells you what's actually happening with your fleet.</p>
+    </div>
+    <div class="fragmented-diagram reveal">
+      <div class="fd-scattered">
+        <span class="fd-chip">ELD Provider</span>
+        <span class="fd-chip">GPS Provider</span>
+        <span class="fd-chip">Dashcam Provider</span>
+        <span class="fd-chip">SIM Provider</span>
+        <span class="fd-chip">Installer</span>
+        <span class="fd-chip">Technical Support</span>
+      </div>
+      <div class="fd-manager">😤<br><span>Fleet Manager</span></div>
+      <div class="fd-arrow" aria-hidden="true">→</div>
+      <div class="fd-one">
+        <div class="fd-one-logo">TrackingmeCA</div>
+        <ul>
+          <li>One Account</li>
+          <li>One Installation Team</li>
+          <li>One Support Relationship</li>
+          <li>One Connected Fleet</li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center" style="margin-top:28px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Consolidate My Fleet Technology</a>
+    </div>
+  </div>
+</section>
+
+<!-- 04. HERO PACKAGE: ELD + VISION -->
+<section class="section-alt">
+  <div class="container">
+    <div class="split reveal">
+      <div>
+        <span class="badge-pill">🏆 Most Popular</span>
+        <h2>Trackingme ELD + Vision</h2>
+        <p class="section-lead">Compliance + Video Evidence + Fleet Visibility, in one connected package. Our most-deployed configuration for 2–50 vehicle fleets that need Hours-of-Service compliance and a real answer when something happens on the road.</p>
+        <ul class="feature-list">
+          <li>ELD — Hours of Service &amp; DVIR</li>
+          <li>Real-time GPS location</li>
+          <li>4G LTE road-facing dashcam</li>
+          <li>Optional driver-facing camera</li>
+          <li>Event recording &amp; incident retrieval</li>
+          <li>Driver safety events</li>
+          <li>ECM vehicle data</li>
+          <li>IFTA mileage support</li>
+        </ul>
+        <a href="{{ root }}eld-dashcam-canada/" class="btn btn-primary">Request Fleet Package</a>
+      </div>
+      <div class="photo-frame" style="--ar:4/3.2">
+        <img class="pf-graphic" src="{{ root }}assets/infographics/mockup-video-review.svg" alt="Fleet dashboard showing a video event review alongside HOS and GPS status">
+        <span class="pf-cap">Compliance, location and video — one screen.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05. CONNECTED ECOSYSTEM -->
+<section id="ecosystem">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">How It Fits Together</span>
+      <h2>One Truck. One Connected Ecosystem.</h2>
+      <p class="section-lead">Every module feeds the same dashboard — nothing to reconcile across three logins.</p>
+    </div>
+    <div class="topology reveal">
+      <div class="topology-flow">
+        <span class="tf-node">Truck</span><span class="tf-arrow">→</span>
+        <span class="tf-node">ELD</span><span class="tf-arrow">→</span>
+        <span class="tf-node">ECM Data</span><span class="tf-arrow">→</span>
+        <span class="tf-node">GPS</span><span class="tf-arrow">→</span>
+        <span class="tf-node">4G AI Dashcam</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Cloud</span><span class="tf-arrow">→</span>
+        <span class="tf-node tf-node--end">Fleet Dashboard</span>
+      </div>
+      <div class="topology-outcomes">
+        <span class="to-chip">✅ Compliance</span>
+        <span class="to-chip">🛡️ Safety</span>
+        <span class="to-chip">⛽ Fuel Efficiency</span>
+        <span class="to-chip">🧾 IFTA</span>
+        <span class="to-chip">🎥 Video Evidence</span>
+        <span class="to-chip">🔧 Vehicle Health</span>
+        <span class="to-chip">📈 Driver Performance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06. THREE PACKAGES -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Solutions</span>
+      <h2>Three Ways to Get Started</h2>
+      <p class="section-lead">Start with what your fleet actually needs — every package is Canadian-supported and professionally installed.</p>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="price-card">
+        <h3>Trackingme ELD</h3>
+        <p class="pc-note">Ideal for owner-operators and small trucking fleets</p>
+        <ul class="feature-list">
+          <li>Electronic driver logs</li>
+          <li>Hours of Service (HOS)</li>
+          <li>DVIR</li>
+          <li>GPS location</li>
+          <li>IFTA mileage support</li>
+          <li>Vehicle/ECM data where supported</li>
+          <li>Driver application</li>
+          <li>Canadian support</li>
+        </ul>
+        <a href="{{ root }}eld-canada/" class="btn btn-outline btn-block">Get ELD Pricing</a>
+      </div>
+      <div class="price-card featured">
+        <span class="pc-badge">Most Popular</span>
+        <h3>Trackingme ELD + Vision</h3>
+        <p class="pc-note">Compliance + video evidence + fleet visibility</p>
+        <ul class="feature-list">
+          <li>Everything in ELD</li>
+          <li>Live vehicle location</li>
+          <li>4G LTE dashcam, road-facing</li>
+          <li>Optional driver-facing camera</li>
+          <li>Event recording &amp; incident retrieval</li>
+          <li>Driver safety events</li>
+        </ul>
+        <a href="{{ root }}eld-dashcam-canada/" class="btn btn-primary btn-block">Request Fleet Package</a>
+      </div>
+      <div class="price-card">
+        <h3>Trackingme Fleet360</h3>
+        <p class="pc-note">For growing fleets that need it all</p>
+        <ul class="feature-list">
+          <li>Everything in ELD + Vision</li>
+          <li>AI video telematics</li>
+          <li>Driver behaviour reporting</li>
+          <li>Asset tracking</li>
+          <li>Temperature monitoring options</li>
+          <li>Fuel monitoring options</li>
+          <li>API / integration options</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="{{ root }}contact.html" class="btn btn-outline btn-block">Talk to a Fleet Specialist</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07. PLATFORM PREVIEW -->
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">The Platform</span>
+      <h2>One Dashboard. Fewer Blind Spots.</h2>
+    </div>
+    <div class="dashboard-mockup reveal">
+      <div class="dm-chrome"><span></span><span></span><span></span><div class="dm-url">fleet.trackingme.ca/dashboard</div></div>
+      <div class="dm-kpis">
+        <div class="dm-kpi"><strong>42</strong><span>Vehicles Online</span></div>
+        <div class="dm-kpi"><strong>31</strong><span>Drivers On Duty</span></div>
+        <div class="dm-kpi"><strong>3</strong><span>Safety Events</span></div>
+        <div class="dm-kpi"><strong>2</strong><span>Open DVIR Issues</span></div>
+        <div class="dm-kpi"><strong>6.4%</strong><span>Idle Time</span></div>
+        <div class="dm-kpi"><strong>8</strong><span>Video Events</span></div>
+        <div class="dm-kpi"><strong>1</strong><span>Vehicle Faults</span></div>
+        <div class="dm-kpi"><strong>1,204&nbsp;mi</strong><span>IFTA Distance</span></div>
+      </div>
+      <img class="dm-screen" src="{{ root }}assets/infographics/mockup-fleet-map.svg" alt="Sample fleet dashboard showing a live map view with vehicle markers">
+      <p class="dm-caption">Sample data shown for illustration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 08. OUTCOMES -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Business Outcomes</span>
+      <h2>Turn Fleet Data Into Better Decisions</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <div class="solution-card"><div class="sc-icon">✅</div><h3>Stay Compliant</h3><p>Simplify driver logs and compliance workflows.</p></div>
+      <div class="solution-card"><div class="sc-icon">📍</div><h3>Know Where Your Fleet Is</h3><p>Real-time vehicle visibility and history.</p></div>
+      <div class="solution-card"><div class="sc-icon">🎥</div><h3>See What Happened</h3><p>Retrieve video around important fleet events.</p></div>
+      <div class="solution-card"><div class="sc-icon">🔧</div><h3>Understand Vehicle Health</h3><p>Access supported ECM and diagnostic information.</p></div>
+      <div class="solution-card"><div class="sc-icon">🧾</div><h3>Simplify IFTA</h3><p>Use vehicle mileage information to support reporting.</p></div>
+      <div class="solution-card"><div class="sc-icon">📈</div><h3>Coach Safer Driving</h3><p>Use events and video context to improve driver behaviour.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 09. HOW IT WORKS -->
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">How It Works</span>
+      <h2>From First Call to Live Fleet</h2>
+    </div>
+    <div class="journey reveal" style="grid-template-columns:repeat(5,1fr);">
+      <div class="journey-step"><h4>Tell Us About Your Fleet</h4><p>Vehicle count, industry, and what you're trying to solve.</p></div>
+      <div class="journey-step"><h4>We Design Your Configuration</h4><p>The right mix of ELD, GPS, video and sensors — nothing extra.</p></div>
+      <div class="journey-step"><h4>We Install &amp; Configure</h4><p>Professional installation, devices and dashboards set up.</p></div>
+      <div class="journey-step"><h4>Your Drivers Start Using It</h4><p>Driver app onboarding, in plain language.</p></div>
+      <div class="journey-step"><h4>Your Fleet Team Gets Visibility</h4><p>Dashboards, alerts and reporting, live.</p></div>
+    </div>
+    <div class="text-center"><a href="{{ root }}index.html#review" class="btn btn-primary">Start My Fleet Review</a></div>
+  </div>
+</section>
+
+<!-- 10. INSTALLATION USP -->
+<section class="section-navy">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Deployment</span>
+      <h2>We Don't Just Ship You a Box.</h2>
+    </div>
+    <div class="journey reveal" style="grid-template-columns:repeat(4,1fr);">
+      <div class="journey-step"><h4>Fleet Review</h4><p>Understand vehicles and requirements.</p></div>
+      <div class="journey-step"><h4>Installation</h4><p>Professional installation by qualified technicians.</p></div>
+      <div class="journey-step"><h4>Configuration</h4><p>Devices, drivers, alerts and dashboards configured.</p></div>
+      <div class="journey-step"><h4>Training &amp; Support</h4><p>Drivers and fleet administrators onboarded.</p></div>
+    </div>
+    <p class="text-center install-tagline">From Box to Road — TrackingmeCA Handles the Deployment.</p>
+    <div class="text-center"><a href="{{ root }}contact.html" class="btn btn-secondary">Schedule Installation</a></div>
+  </div>
+</section>
+
+<!-- 11. INDUSTRIES -->
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Built For</span>
+      <h2>Fleets Across Canada</h2>
+      <p class="section-lead">Purpose-built for commercial operators from 2 to 50+ vehicles.</p>
+    </div>
+    <div class="grid grid-4 reveal">
+      <a class="solution-card" href="{{ root }}industries/trucking/"><div class="sc-icon">🚛</div><h3>Trucking</h3><p>ELD, HOS, DVIR, IFTA and cross-border operation.</p></a>
+      <a class="solution-card" href="{{ root }}industries/logistics/"><div class="sc-icon">📦</div><h3>Logistics</h3><p>Multi-stop routing, visibility and reporting.</p></a>
+      <a class="solution-card" href="{{ root }}industries/construction/"><div class="sc-icon">🏗️</div><h3>Construction</h3><p>Equipment tracking, idle time and fuel monitoring.</p></a>
+      <a class="solution-card" href="{{ root }}industries/courier-delivery/"><div class="sc-icon">📮</div><h3>Courier &amp; Delivery</h3><p>Last-mile visibility and proof of delivery routes.</p></a>
+      <a class="solution-card" href="{{ root }}industries/towing/"><div class="sc-icon">🚨</div><h3>Towing</h3><p>Dispatch visibility and driver safety on every call.</p></a>
+      <a class="solution-card" href="{{ root }}industries/field-service/"><div class="sc-icon">🧰</div><h3>Field Service</h3><p>Job-site arrival, route history and vehicle health.</p></a>
+      <a class="solution-card" href="{{ root }}industries/cold-chain/"><div class="sc-icon">🌡️</div><h3>Cold Chain</h3><p>Temperature, door sensors and proof of conditions.</p></a>
+      <a class="solution-card" href="{{ root }}solutions/cold-chain.html"><div class="sc-icon">🗑️</div><h3>Waste &amp; Municipal</h3><p>Route verification and asset accountability.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 12. FREE FLEET REVIEW -->
+<section class="section-alt" id="review">
+  <div class="container split">
+    <div>
+      <span class="section-kicker">Free Fleet Technology Review</span>
+      <h2>Get a Free Fleet Technology &amp; Compliance Review</h2>
+      <p class="section-lead">Already using an ELD, GPS or dashcam? We'll review your current setup and show where systems can be consolidated, upgraded or simplified.</p>
+      <ul class="feature-list">
+        <li>No obligation, no pressure</li>
+        <li>Reviewed by a Canadian fleet advisor</li>
+        <li>Works whether you're switching or just comparing</li>
+      </ul>
+    </div>
+    <div>
+      <div class="form-card">
+        <form data-lead-form="fleet-review" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <div class="form-grid">
+            <div class="form-field"><label for="fr-name">Full Name</label><input id="fr-name" name="name" type="text" required autocomplete="name"></div>
+            <div class="form-field"><label for="fr-company">Company Name</label><input id="fr-company" name="company" type="text" required autocomplete="organization"></div>
+            <div class="form-field"><label for="fr-email">Email Address</label><input id="fr-email" name="email" type="email" required autocomplete="email"></div>
+            <div class="form-field"><label for="fr-phone">Phone Number</label><input id="fr-phone" name="phone" type="tel" required autocomplete="tel"></div>
+            <div class="form-field"><label for="fr-fleet">Fleet Size</label>
+              <select id="fr-fleet" name="fleet_size" required>
+                <option value="">Select…</option>
+                <option>1–2 vehicles</option><option>3–10 vehicles</option><option>11–25 vehicles</option><option>26–50 vehicles</option><option>51–100 vehicles</option><option>100+ vehicles</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="fr-province">Province</label>
+              <select id="fr-province" name="province" required>
+                <option value="">Select…</option>
+                <option>Ontario</option><option>British Columbia</option><option>Alberta</option><option>Quebec</option><option>Manitoba</option><option>Saskatchewan</option><option>Atlantic Canada</option><option>Territories</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="fr-eld">Current ELD <span class="opt">(optional)</span></label><input id="fr-eld" name="current_eld" type="text"></div>
+            <div class="form-field"><label for="fr-gps">Current GPS Provider <span class="opt">(optional)</span></label><input id="fr-gps" name="current_gps" type="text"></div>
+            <div class="form-field"><label for="fr-dashcam">Current Dashcam <span class="opt">(optional)</span></label><input id="fr-dashcam" name="current_dashcam" type="text"></div>
+            <div class="form-field"><label for="fr-crossborder">Cross-Border Canada/USA?</label>
+              <select id="fr-crossborder" name="cross_border">
+                <option value="">Select…</option><option>Yes</option><option>No</option><option>Sometimes</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="fr-renewal">Contract Renewal Date <span class="opt">(optional)</span></label><input id="fr-renewal" name="renewal_date" type="date"></div>
+            <div class="form-field full"><label for="fr-challenge">Primary Challenge</label><textarea id="fr-challenge" name="primary_challenge" rows="3" placeholder="What's not working with your current setup?"></textarea></div>
+          </div>
+          <label class="consent-row">
+            <input type="checkbox" required>
+            <span>I consent to TrackingmeCA contacting me about this review, as described in the <a href="{{ root }}privacy-policy.html">Privacy Policy</a>.</span>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block">Review My Fleet</button>
+        </form>
+        <div class="form-success">
+          <div class="fs-icon">✓</div>
+          <h3>Thank you — your review request is in.</h3>
+          <p>A Canadian fleet advisor will look over your current setup and follow up with what we find.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12b. COMPETITOR REPLACEMENT -->
+<section>
+  <div class="container text-center">
+    <span class="section-kicker">Already Using Another Fleet Platform?</span>
+    <h2>We Can Review Your Existing Setup Before You Renew</h2>
+    <p class="section-lead" style="margin:0 auto 22px;">If your current fleet technology is expensive, fragmented or difficult to support, TrackingmeCA can evaluate whether consolidation makes business sense — whether you're currently on Geotab, Samsara, Motive, Fleet Complete, another ELD, or standalone GPS and cameras.</p>
+    <a href="{{ root }}index.html#review" class="btn btn-outline">Compare My Current Setup</a>
+  </div>
+</section>
+
+<!-- 13. COVERAGE MAP -->
+<section class="section-alt">
+  <div class="container text-center">
+    <span class="section-kicker">Coverage</span>
+    <h2>Installation Coverage Across Canada</h2>
+    <p class="section-lead" style="margin:0 auto 20px;">Installation coverage available in Ontario, Alberta and British Columbia, expanding into Manitoba, Saskatchewan, Quebec and Atlantic Canada.</p>
+    <div class="coverage-map reveal">
+      <span class="cm-region cm-active">Ontario</span>
+      <span class="cm-region cm-active">Alberta</span>
+      <span class="cm-region cm-active">British Columbia</span>
+      <span class="cm-region cm-expanding">Manitoba</span>
+      <span class="cm-region cm-expanding">Saskatchewan</span>
+      <span class="cm-region cm-expanding">Quebec</span>
+      <span class="cm-region cm-expanding">Atlantic Canada</span>
+    </div>
+    <a href="{{ root }}installation-network/" class="btn btn-outline">View Installation Network</a>
+  </div>
+</section>
+
+<!-- 14. CASE STUDY (placeholder) -->
+<section>
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Case Study</span>
+      <h2>Real Fleet Results, Coming Soon</h2>
+    </div>
+    <div class="case-study-placeholder reveal">
+      <p>We're finalizing our first published case study with customer approval. In the meantime, tell us about your fleet and we'll show you how the same approach could apply.</p>
+      <a href="{{ root }}contact.html" class="btn btn-outline">Build a Similar Solution</a>
+    </div>
+  </div>
+</section>
+
+<!-- 15. RESOURCES -->
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">Fleet Knowledge Centre</span>
+      <h2>Recent Resources</h2>
+    </div>
+    <div class="grid grid-3 reveal">
+      <a class="blog-card" href="{{ root }}blog/eld-compliance-canada.html" style="text-decoration:none;">
+        <div class="photo-frame" style="--ar:16/10"><img class="pf-graphic" src="{{ root }}assets/infographics/eld-hos-dashboard.svg" alt="ELD Hours of Service dashboard mockup"></div>
+        <div class="blog-card-body"><span class="blog-tag">ELD &amp; Compliance</span><h3>ELD Compliance in Canada: A Plain-English Guide</h3></div>
+      </a>
+      <a class="blog-card" href="{{ root }}blog/bc-dashcam-law.html" style="text-decoration:none;">
+        <div class="photo-frame" style="--ar:16/10"><img class="pf-graphic" src="{{ root }}assets/infographics/dashcam-coverage.svg" alt="Dashcam camera coverage diagram"></div>
+        <div class="blog-card-body"><span class="blog-tag">Canadian Regulations</span><h3>B.C.'s New Dashcam Law: What Fleets Need to Know</h3></div>
+      </a>
+      <a class="blog-card" href="{{ root }}blog/fuel-theft-prevention.html" style="text-decoration:none;">
+        <div class="photo-frame" style="--ar:16/10"><img class="pf-graphic" src="{{ root }}assets/infographics/fuel-tank-sensor.svg" alt="Fuel tank sensor diagram with theft alert"></div>
+        <div class="blog-card-body"><span class="blog-tag">Fleet Management</span><h3>Preventing Fuel Theft in Your Fleet</h3></div>
+      </a>
+    </div>
+    <div class="text-center" style="margin-top:20px;"><a href="{{ root }}resources.html" class="btn btn-outline">Visit the Knowledge Centre →</a></div>
+  </div>
+</section>
+
+<!-- 16. FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>Common Questions</h2></div>
+    <div class="faq-list" style="max-width:780px;margin:0 auto;">
+      {{ m.faq_item("What is an ELD?", "An Electronic Logging Device automatically records a commercial driver's Hours of Service, replacing paper logbooks.") }}
+      {{ m.faq_item("Do Canadian truck drivers need ELDs?", "Federally regulated commercial drivers in Canada are generally required to use a certified ELD to record Hours of Service — requirements vary by operation type and jurisdiction, so confirm what applies to your fleet.") }}
+      {{ m.faq_item("Can TrackingmeCA install ELDs?", "Yes — professional installation is part of every ELD package, not a separate step you have to arrange yourself.") }}
+      {{ m.faq_item("Can ELD and dashcam work together?", "Yes, our ELD + Vision package connects HOS, GPS and video in one dashboard instead of two separate systems.") }}
+      {{ m.faq_item("Can I track trucks in real time?", "Yes — real-time GPS location is included in every package, from ELD-only through Fleet360.") }}
+      {{ m.faq_item("Can the system support fleets crossing into the U.S.?", "Our packages support Canada–U.S. cross-border operation — see our <a href=\"" ~ root ~ "cross-border-fleet/\">cross-border fleet page</a> for what to confirm before you rely on it operationally.") }}
+      {{ m.faq_item("Does TrackingmeCA support small fleets?", "Yes — our packages are built primarily for 2–50 vehicle fleets, and scale to larger deployments.") }}
+      {{ m.faq_item("Can TrackingmeCA replace an existing system?", "In many cases, yes. Request a Free Fleet Technology Review and we'll tell you honestly whether switching makes sense before you commit to anything.") }}
+      {{ m.faq_item("How quickly can a fleet be installed?", "Timelines depend on fleet size and configuration — your fleet advisor will give you a specific installation schedule after your fleet review.") }}
+      {{ m.faq_item("Do you provide support after installation?", "Yes — configuration, driver training and ongoing support are part of every package.") }}
+    </div>
+  </div>
+</section>
+
+<!-- 17. FINAL CTA -->
+<section class="section-navy">
+  {{ m.cta_band(
+    "Ready to Simplify Your Fleet Technology?",
+    "Tell us how many vehicles you operate. We'll help you build the right combination of ELD, tracking, video and installation.",
+    "Get Fleet Pricing", root ~ "contact.html",
+    "Book a Free Fleet Review", root ~ "index.html#review",
+    "No generic package. Start with what your fleet actually needs."
+  ) }}
+</section>
+
+{% endblock %}

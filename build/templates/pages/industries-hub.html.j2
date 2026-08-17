@@ -1,0 +1,41 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <span class="hero-eyebrow">🧭 Industries We Serve</span>
+    <h1>Fleet Technology for Every Kind of Canadian Fleet</h1>
+    <p>From single-truck owner-operators to national fleets — TrackingmeCA scales to fit how your industry actually operates, across Ontario, British Columbia, Alberta and every province we serve.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="grid grid-2">
+
+      <a class="solution-card reveal" href="{{ root }}industries/trucking/"><div class="sc-icon">🚛</div><h3>Trucking &amp; Transportation</h3><p>ELD, HOS, DVIR, IFTA and cross-border operation for carriers and owner-operators.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/logistics/"><div class="sc-icon">📦</div><h3>Logistics</h3><p>Multi-stop routing visibility, fuel efficiency and fleet utilization reporting.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/construction/"><div class="sc-icon">🏗️</div><h3>Construction &amp; Heavy Equipment</h3><p>Equipment tracking, idle time, fuel monitoring and job-site accountability.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/courier-delivery/"><div class="sc-icon">📮</div><h3>Courier &amp; Delivery</h3><p>Last-mile visibility, route history and proof-of-delivery accountability.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/towing/"><div class="sc-icon">🚨</div><h3>Towing</h3><p>Dispatch visibility, driver safety and incident evidence on every call.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/field-service/"><div class="sc-icon">🧰</div><h3>Field Service</h3><p>Job-site arrival tracking, route history and vehicle health monitoring.</p></a>
+      <a class="solution-card reveal" href="{{ root }}industries/cold-chain/"><div class="sc-icon">🌡️</div><h3>Cold-Chain Logistics</h3><p>Temperature, humidity and door-sensor monitoring with proof of conditions.</p></a>
+
+      <article class="solution-card reveal"><div class="sc-icon">🚚</div><h3>Owner-Operators</h3><p>Affordable, easy-to-use ELD and tracking built for independent drivers.</p><a class="sc-link" href="{{ root }}eld-canada/">See ELD for owner-operators →</a></article>
+      <article class="solution-card reveal"><div class="sc-icon">🚕</div><h3>Taxi &amp; Limousine Fleets</h3><p>Vehicle security, driver safety and utilization tracking for passenger-for-hire fleets.</p><a class="sc-link" href="{{ root }}fleet-dashcam-canada/">See AI dashcams →</a></article>
+      <article class="solution-card reveal"><div class="sc-icon">🚗</div><h3>Car-Rental Companies</h3><p>Asset recovery, geofencing and unauthorized-use alerts for rental fleets.</p><a class="sc-link" href="{{ root }}gps-fleet-tracking-canada/">See GPS tracking →</a></article>
+      <article class="solution-card reveal"><div class="sc-icon">🚌</div><h3>School &amp; Passenger Transportation</h3><p>Route safety, driver monitoring and video evidence for passenger transport.</p><a class="sc-link" href="{{ root }}solutions/driver-monitoring.html">See driver monitoring →</a></article>
+      <article class="solution-card reveal"><div class="sc-icon">🏛️</div><h3>Municipal &amp; Service Fleets</h3><p>Utilization reporting and accountability tools for public fleets.</p><a class="sc-link" href="{{ root }}gps-fleet-tracking-canada/">See GPS tracking →</a></article>
+      <article class="solution-card reveal"><div class="sc-icon">🛡️</div><h3>Insurance Companies &amp; Brokers</h3><p>Video evidence and driver-behaviour data for claims investigations.</p><a class="sc-link" href="{{ root }}partners.html">See insurance partnerships →</a></article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Don't See Your Industry Listed?", "We build flexible packages for fleets of every type. Tell us about your operation and we'll recommend the right fit.", "Talk to a Fleet Advisor", root ~ "contact.html") }}
+</section>
+
+{% endblock %}

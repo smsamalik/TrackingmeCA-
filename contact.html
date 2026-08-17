@@ -92,7 +92,8 @@
 
     <div>
       <div class="form-card">
-        <form data-lead-form novalidate>
+        <form data-lead-form="contact" novalidate>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
           <div class="form-grid">
             <div class="form-field"><label for="c-name">Full Name</label><input id="c-name" name="name" type="text" required autocomplete="name"></div>
             <div class="form-field"><label for="c-company">Company Name</label><input id="c-company" name="company" type="text" required autocomplete="organization"></div>
@@ -196,6 +197,7 @@
     <div class="footer-bottom"><span>© <span data-year></span> TrackingMe.ca. All rights reserved.</span></div>
   </div>
 </footer>
+<script src="js/lead-config.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

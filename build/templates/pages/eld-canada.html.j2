@@ -1,0 +1,109 @@
+{% extends "base.html.j2" %}
+{% import "macros.html.j2" as m %}
+
+{% block content %}
+
+<section class="page-hero">
+  <div class="container">
+    <p class="breadcrumb" style="color:#cfe0f2;"><a href="{{ root }}index.html" style="color:#cfe0f2;">Home</a> / ELD Canada</p>
+    <span class="hero-eyebrow">📋 ELD Canada</span>
+    <h1>ELD Solutions for Canadian Trucking Fleets</h1>
+    <p>Electronic driver logs, Hours of Service and DVIR — professionally installed and supported in Canada, for owner-operators through commercial fleets.</p>
+    <div class="hero-ctas" style="margin-top:26px;">
+      <a href="{{ root }}contact.html" class="btn btn-primary">Get ELD Pricing</a>
+      <a href="#faq" class="btn btn-ghost-light">ELD FAQs</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container split">
+    <div>
+      <span class="section-kicker">What's Included</span>
+      <h2>Everything You Need for Canadian HOS Compliance</h2>
+      <ul class="feature-list">
+        <li>Driver Hours of Service (HOS) monitoring</li>
+        <li>Electronic driver logs, accessible in-cab and in the dashboard</li>
+        <li>Driver Vehicle Inspection Reports (DVIR)</li>
+        <li>Real-time GPS location</li>
+        <li>Vehicle/ECM data where supported</li>
+        <li id="ifta">IFTA mileage support</li>
+        <li>Real-time HOS violation alerts</li>
+        <li>Dispatcher and fleet-manager compliance dashboard</li>
+        <li>Canada–U.S. cross-border operation support</li>
+      </ul>
+      <a href="{{ root }}eld-dashcam-canada/" class="compare-note" style="display:block;">Want video with your ELD? See the ELD + Dashcam package →</a>
+    </div>
+    <div class="photo-frame" style="--ar:4/3.4">
+      <img class="pf-graphic" src="{{ root }}assets/infographics/eld-hos-dashboard.svg" alt="ELD Hours of Service dashboard showing drive, shift, break and cycle time remaining">
+      <span class="pf-cap">Real-time Hours of Service status, right in the cab.</span>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal text-center">
+      <span class="section-kicker">How It Works</span>
+      <h2>From Driver to Dashboard</h2>
+    </div>
+    <div class="topology reveal">
+      <div class="topology-flow">
+        <span class="tf-node">Driver</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Vehicle / ECM</span><span class="tf-arrow">→</span>
+        <span class="tf-node">ELD</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Mobile App</span><span class="tf-arrow">→</span>
+        <span class="tf-node">Cloud</span><span class="tf-arrow">→</span>
+        <span class="tf-node tf-node--end">Safety Manager</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="disclaimer-box">
+      <strong>Compliance disclaimer:</strong> References to ELD compliance on this page apply only to certified and approved hardware and firmware configurations, installed and used as directed by TrackingmeCA and the applicable regulator. Certification status, technical requirements and enforcement details can change and may vary by device model, firmware version and jurisdiction. Confirm current certification for your specific configuration before relying on it for regulatory compliance, and consult the applicable federal or provincial transportation authority for authoritative guidance.
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-kicker">Who It's For</span>
+      <h2>Built to Scale With Your Operation</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="solution-card reveal">
+        <div class="sc-icon">🚚</div>
+        <h3>Owner-Operators</h3>
+        <p>A simple, affordable ELD that keeps a single truck compliant without unnecessary complexity or long-term lock-in.</p>
+      </div>
+      <div class="solution-card reveal">
+        <div class="sc-icon">🚛</div>
+        <h3>Commercial Fleets</h3>
+        <p>Fleet-wide HOS visibility, DVIR tracking and compliance alerts for dispatchers managing dozens or hundreds of drivers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head reveal text-center"><span class="section-kicker">FAQ</span><h2>ELD Compliance Questions</h2></div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+      {{ m.faq_item("Is TrackingmeCA's ELD certified for use in Canada?", "Compliance claims apply only to certified and approved ELD hardware/firmware configurations, used and installed as directed. Certification can vary by device model and firmware version &mdash; confirm current certification for your specific configuration before relying on it for regulatory compliance.") }}
+      {{ m.faq_item("Is this suitable for a single owner-operator truck?", "Yes &mdash; the platform is designed to scale from one truck to large commercial fleets, with pricing and packages suited to each.") }}
+      {{ m.faq_item("Does it support IFTA reporting?", "The platform provides IFTA mileage support to help simplify fuel-tax reporting. Consult your tax advisor or provincial authority to confirm your specific filing obligations.") }}
+      {{ m.faq_item("Can dispatchers see HOS status across the whole fleet?", "Yes &mdash; the dispatcher and fleet-manager dashboard provides real-time HOS status, violation alerts and DVIR visibility across all connected vehicles.") }}
+      {{ m.faq_item("Does this work for Canada-U.S. cross-border operations?", "Our ELD packages support cross-border operation &mdash; see our <a href=\"" ~ root ~ "cross-border-fleet/\">cross-border fleet page</a> for what to confirm before you rely on it operationally.") }}
+    </div>
+  </div>
+</section>
+
+<section class="section-navy">
+  {{ m.cta_band("Ready to Simplify ELD Compliance?", "Get pricing for your fleet, or book a free fleet review first if you're not sure what you need.", "Get ELD Pricing", root ~ "contact.html", "Book a Free Fleet Review", root ~ "index.html#review") }}
+</section>
+
+{% endblock %}
